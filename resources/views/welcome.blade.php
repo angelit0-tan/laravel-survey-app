@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="app">
-            <test-page/>
+
         </div>
     </body>
 </html>
