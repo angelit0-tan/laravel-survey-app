@@ -3,7 +3,7 @@
         <my-header></my-header>
     </div>
     <div id="willkommen" class="p-2">
-        <h2 class="font-bold small-caps">            
+        <h2 class="font-bold small-caps text-3xl">            
             Guten Tag.
         </h2>
     </div>
@@ -29,7 +29,7 @@
         </p>
     </div>
     <div id="szenario" class="border border-black p-2 mb-5">
-        <p class="font-bold small-caps mb-5">Szenario:</p>
+        <h class="font-bold small-caps mb-5 text-2xl">Szenario:</h>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
         
