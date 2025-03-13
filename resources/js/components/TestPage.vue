@@ -28,7 +28,7 @@
             Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
         </p>
     </div>
-    <div id="szenario" class="p-2 mb-5 bg-gray-100">
+    <div id="szenario" class="p-2 mb-5 py-8 bg-gray-100">
         <h2 class="font-bold small-caps mb-5">Szenario:</h2>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
@@ -109,7 +109,7 @@
         Hier die 6 Fragen:
     </div>
 
-    <div class="grid grid-cols-2 mb-5 border border-black" v-for="question in questions" :key="question.id">
+    <div class="grid grid-cols-2 mb-8 border border-black" v-for="question in questions" :key="question.id">
         <div class="border-r border-black p-2 row-span-4">
             {{ question.id}}.) <span v-html="question.question" />
         </div>
@@ -131,11 +131,8 @@
             </div>
         </div>
     </div>
-    <div class="border-r border-l border-t border-black py-3 mt-16">
-
-    </div>
-    <div class="grid grid-cols-2 border border-black">
-        <div class="border-r border-black p-2">
+    <div class="grid grid-cols-2 ">
+        <div class="p-2">
             <p class="font-bold">
                 Das war's schon.
             </p>
@@ -225,3 +222,9 @@ const questions = [
 const selectedAnswers = ref({});
 
 </script>
+
+<style scoped>
+#szenario {
+    display: absolute;
+}
+</style>
