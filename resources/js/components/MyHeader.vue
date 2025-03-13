@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex justify-between" 
+        <div class="flex justify-between mb-5" 
            >
             <div 
                 class="">
@@ -10,6 +10,9 @@
                 >
                 <nav-menu></nav-menu>
             </div>
+        </div>
+        <div>
+          <img src="/images/header-bg.jpg" />
         </div>
     </div>
 </template>
