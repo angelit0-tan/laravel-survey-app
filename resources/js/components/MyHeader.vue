@@ -1,17 +1,17 @@
 <template>
     <div class="">
-        <div class="flex justify-between my-5 mt-0" 
+        <div class="flex justify-between" 
            >
             <div 
                 class="">
-                <img src="/images/logo.png" class="w-96" />
+                <img src="/images/logo.png" class="w-96 m-10" />
             </div>
             <div class="container">
-                <nav-menu></nav-menu>
+                <!-- <nav-menu></nav-menu> -->
             </div>
         </div>
         <div>
-          <img src="/images/header-hulst.jpg" class="w-screen"/>
+          <img src="/images/header-hulst.jpg" class="relative w-screen"/>
           <img src="/images/bubble.png" class="bubble absolute w-96"/>
         </div>
         
