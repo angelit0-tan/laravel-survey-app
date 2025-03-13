@@ -35,5 +35,7 @@ const toggleMenu = () => {
   ul {
     color: #007ca6;
     background: white;
+    right: 430px;
+    font-size: 1.25rem;
   }
 </style>
