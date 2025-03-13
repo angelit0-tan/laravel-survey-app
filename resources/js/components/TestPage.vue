@@ -29,7 +29,7 @@
         </div>
     </div>
     <div id="szenario" class="bg-gray-100 mb-10 py-8">
-        <div class="container mb-5">
+        <div class="container mb-5 py-8">
             <h2 class="font-bold small-caps mb-5 ">Szenario:</h2>
 
             <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
