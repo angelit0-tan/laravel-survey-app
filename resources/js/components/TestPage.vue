@@ -105,10 +105,6 @@
         </p>
     </div>
 
-    <div class="font-bold mb-5 small-caps text-xl">
-        Bitte blättern Sie um!
-    </div>
-
     <div id="umfrage" class="font-bold mb-5 small-caps text-xl">        
         Hier die 6 Fragen:
     </div>
@@ -173,12 +169,6 @@ const questions = [
             'nicht verhältnismäßig',
             'im ausgewogenen Verhältnis.'
         ],
-        scores: [
-            '-2',
-            '-1',
-            '+1',
-            '+2'
-        ],
     },
     {
         id: 2,
@@ -199,12 +189,6 @@ const questions = [
             'gerechtfertigt',
             'sehr gerechtfertigt'
         ],
-        scores: [
-            '-2',
-            '-1',
-            '+1',
-            '+2'
-        ],
     },
     {
         id: 4,
@@ -214,12 +198,6 @@ const questions = [
             'inakzeptabel',
             'akzeptabel',
             'völlig akzeptabel'
-        ],
-        scores: [
-            '-2',
-            '-1',
-            '+1',
-            '+2'
         ],
     },
     {
