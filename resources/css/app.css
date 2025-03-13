@@ -147,6 +147,18 @@ h3 {
   color: #007ca6;
 }
 
+#szenario {
+  position: absolute;
+  left: 0px;
+  padding-left: 28rem;
+  padding-right: 28rem;
+}
+
+#umfrage {
+  background-color: #00a4dc;
+  margin-top: 2225px;
+}
+
 .small-caps {
     font-variant: small-caps;
 }

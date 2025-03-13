@@ -104,53 +104,52 @@
             Für Ihre Antwort machen Sie bitte einfach 6 Kreuzchen bei den unten stehen kurzen Fragen:
         </p>
     </div>
-
-    <div id="umfrage" class="font-bold mb-5 small-caps text-xl">        
-        Hier die 6 Fragen:
-    </div>
-
-    <div class="grid grid-cols-2 mb-8 border border-black" v-for="question in questions" :key="question.id">
-        <div class="border-r border-black p-2 row-span-4">
-            {{ question.id}}.) <span v-html="question.question" />
+    <div id="umfrage" class="p-2 mt-96">
+        <div class="font-bold mb-5 small-caps text-xl">        
+            Hier die 6 Fragen:
         </div>
-        <div class="">
-            <div class="flex justify-between" :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
-                <div class="p-1.5">
-                    <input 
-                    type="checkbox" 
-                    :id="`question-${question.id}-choice-${index}`" 
-                    :value="choice"
-                    />
-                    <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
-                        <span v-html="choice" />
-                    </label>
-                </div>
-                <div class="border-l border-black w-20 text-center p-1.5" v-if=question.scores>
-                    {{ question.scores[index] }}
+
+        <div class="grid grid-cols-2 mb-8 border border-black" v-for="question in questions" :key="question.id">
+            <div class="border-r border-black p-2 row-span-4">
+                {{ question.id}}.) <span v-html="question.question" />
+            </div>
+            <div class="">
+                <div class="flex justify-between" :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
+                    <div class="p-1.5">
+                        <input 
+                        type="checkbox" 
+                        :id="`question-${question.id}-choice-${index}`" 
+                        :value="choice"
+                        />
+                        <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
+                            <span v-html="choice" />
+                        </label>
+                    </div>
+                    <div class="border-l border-black w-20 text-center p-1.5" v-if=question.scores>
+                        {{ question.scores[index] }}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="grid grid-cols-2 ">
-        <div class="p-2">
-            <p class="font-bold">
-                Das war's schon.
-            </p>
-            <p class="mb-5">                
-                Wir danken Ihnen für Ihre wertvolle Meinung und Ihre Zeit!<br />
-                Gerne würden wir Sie dafür belohnen.
-            </p>
-            <p class="mb-5">                
-                Sie möchten an der Verlosung für die zehn 100 Euro Direktgewinne teilnehmen?<br />
-                Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
-            </p>
-            <p class="font-bold">                
-                Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
-            </p>
-        </div>
-        <div class="self-center p-2">
+    <div class="p-2">
+        <p class="font-bold">
+            Das war's schon.
+        </p>
+        <p class="mb-5">                
+            Wir danken Ihnen für Ihre wertvolle Meinung und Ihre Zeit!<br />
+            Gerne würden wir Sie dafür belohnen.
+        </p>
+        <p class="mb-5">                
+            Sie möchten an der Verlosung für die zehn 100 Euro Direktgewinne teilnehmen?<br />
+            Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
+        </p>            
+        <p class="mb-5">
             hre E-Mail-Adresse: <input class="ml-2 border-b border-rose-400" type="text" />
-        </div>
+        </p>
+        <p class="font-bold">                
+            Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
+        </p>
     </div>
 </template>
 <script setup>
@@ -225,6 +224,7 @@ const selectedAnswers = ref({});
 
 <style scoped>
 #szenario {
-    display: absolute;
+    position: absolute;
+    left: 0px;
 }
 </style>
