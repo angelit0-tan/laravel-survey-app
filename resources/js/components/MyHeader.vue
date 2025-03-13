@@ -12,7 +12,7 @@
         </div>
         <div class="relative">
           <img src="/images/header-hulst.jpg" class="w-screen"/>
-          <img src="/images/bubble.png" class="bubble absolute w-96"/>
+          <img src="/images/bubble.png" class="bubble absolute w-1/3"/>
         </div>
         
     </div>
@@ -21,6 +21,5 @@
 .bubble {
   right: 20%;
   bottom: -12%;
-  width: 600px;
 }
 </style>
