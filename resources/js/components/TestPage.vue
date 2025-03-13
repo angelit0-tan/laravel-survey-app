@@ -1,34 +1,34 @@
 <template>
-    <div class="text-xl small-caps mb-5 font-bold">
-        +  Meinungsumfrage Hulst- Vsn 3d
+    <div>
+        <my-header></my-header>
     </div>
-    <div class="bg-gray-300 border border-black p-2 text-xl">
-        <p class="font-bold small-caps">            
+    <div id="willkommen" class="bg-gray-300 p-2 text-xl">
+        <h2 class="font-bold small-caps">            
             Guten Tag.
-        </p>
+        </h2>
     </div>
-    <div class="border border-black p-2 mb-5">
+    <div class="p-2 mb-5">
         <p class="font-bold my-5 text-lg">
             Hier eine kurze Meinungsumfrage; sie richtet sich an die Bewohner von Hulst und Umgebung:
         </p>
 
-        <p class="font-bold small-caps text-lg">Worum geht es?</p>
+        <h3 class="font-bold small-caps text-lg">Worum geht es?</h3>
         <p class="mb-5">            
             Die Hulster Stadtverwaltung und ihre Bürgermeisterin. – Ihre Meinung zählt!
         </p>
 
-        <p class="font-bold small-caps text-lg">Warum sollten Sie teilnehmen?</p>
+        <h3 class="font-bold small-caps text-lg">Warum sollten Sie teilnehmen?</h3>
         <p class="mb-5">            
             Unter allen Teilnehmern werden zehn Direktgewinne zu je 100 Euro verlost – für nur fünf Minuten Ihrer Zeit. 
         </p>
 
-        <p class="font-bold small-caps text-lg">Wie läuft es ab?</p>
+        <h3 class="font-bold small-caps text-lg">Wie läuft es ab?</h3>
         <p class="mb-5">            
             Sie lesen das unten stehende Szenario und beantworten sechs kurze Fragen. – Sie müssen nur ankreuzen.
             Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
         </p>
     </div>
-    <div class="border border-black p-2 mb-5">
+    <div id="szenario" class="border border-black p-2 mb-5">
         <p class="font-bold small-caps mb-5 text-lg">Szenario:</p>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
@@ -109,7 +109,7 @@
         Bitte blättern Sie um!
     </div>
 
-    <div class="font-bold mb-5 small-caps text-xl">        
+    <div id="umfrage" class="font-bold mb-5 small-caps text-xl">        
         Hier die 6 Fragen:
     </div>
 
