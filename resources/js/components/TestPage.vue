@@ -112,12 +112,12 @@
         </h2>
 
         <div class="grid grid-cols-2 mb-8" v-for="question in questions" :key="question.id">
-            <div class="question p-2 row-span-4 p-5 text-white">
+            <div class="question row-span-4 p-6 text-white">
                 <span v-html="question.question" />
             </div>
             <div class="border border-black">
                 <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
-                    <div class="p-1.5">
+                    <div class=" p-2.5">
                         <input 
                         type="checkbox" 
                         :id="`question-${question.id}-choice-${index}`" 
@@ -126,9 +126,6 @@
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
                             <span v-html="choice" />
                         </label>
-                    </div>
-                    <div class="border-l border-black w-20 text-center p-1.5" v-if=question.scores>
-                        {{ question.scores[index] }}
                     </div>
                 </div>
             </div>
@@ -147,7 +144,7 @@
             Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
         </p>            
         <p class="mb-5">
-            Ihre E-Mail-Adresse: <input class="ml-2 w-96 border-b border-blue-800" type="text" />
+            Ihre E-Mail-Adresse: <input class="email ml-2" type="text" />
         </p>
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
@@ -225,5 +222,8 @@ const selectedAnswers = ref({});
 </script>
 
 <style scoped>
-
+.email {
+    border-bottom: 2px solid #00a4dc;
+    width: 30rem;
+}
 </style>
