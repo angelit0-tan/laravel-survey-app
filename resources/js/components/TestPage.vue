@@ -2,7 +2,7 @@
     <div class="mb-10">
         <my-header></my-header>
     </div>
-    <div id="willkommen" class="py-6">       
+    <div id="willkommen" class="py-8">       
         <div class="p-2 mb-5">
             <h2 class="font-bold small-caps">            
                 Guten Tag.
