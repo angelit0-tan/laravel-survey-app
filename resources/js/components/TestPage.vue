@@ -1,8 +1,8 @@
 <template>
-    <div class="mb-5">
+    <div class="mb-10">
         <my-header></my-header>
     </div>
-    <div id="willkommen" class="bg-gray-300 p-2">
+    <div id="willkommen" class="p-2">
         <h2 class="font-bold small-caps">            
             Guten Tag.
         </h2>
