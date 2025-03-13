@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mb-5">
         <my-header></my-header>
     </div>
     <div id="willkommen" class="bg-gray-300 p-2 text-xl">
