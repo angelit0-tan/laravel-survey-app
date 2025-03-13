@@ -2,34 +2,34 @@
     <div class="mb-5">
         <my-header></my-header>
     </div>
-    <div id="willkommen" class="bg-gray-300 p-2 text-xl">
+    <div id="willkommen" class="bg-gray-300 p-2">
         <h2 class="font-bold small-caps">            
             Guten Tag.
         </h2>
     </div>
     <div class="p-2 mb-5">
-        <p class="font-bold my-5 text-lg">
+        <p class="font-bold my-5">
             Hier eine kurze Meinungsumfrage; sie richtet sich an die Bewohner von Hulst und Umgebung:
         </p>
 
-        <h3 class="font-bold small-caps text-lg">Worum geht es?</h3>
+        <h3 class="font-bold small-caps">Worum geht es?</h3>
         <p class="mb-5">            
             Die Hulster Stadtverwaltung und ihre Bürgermeisterin. – Ihre Meinung zählt!
         </p>
 
-        <h3 class="font-bold small-caps text-lg">Warum sollten Sie teilnehmen?</h3>
+        <h3 class="font-bold small-caps">Warum sollten Sie teilnehmen?</h3>
         <p class="mb-5">            
             Unter allen Teilnehmern werden zehn Direktgewinne zu je 100 Euro verlost – für nur fünf Minuten Ihrer Zeit. 
         </p>
 
-        <h3 class="font-bold small-caps text-lg">Wie läuft es ab?</h3>
+        <h3 class="font-bold small-caps">Wie läuft es ab?</h3>
         <p class="mb-5">            
             Sie lesen das unten stehende Szenario und beantworten sechs kurze Fragen. – Sie müssen nur ankreuzen.
             Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
         </p>
     </div>
     <div id="szenario" class="border border-black p-2 mb-5">
-        <p class="font-bold small-caps mb-5 text-lg">Szenario:</p>
+        <p class="font-bold small-caps mb-5">Szenario:</p>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
         

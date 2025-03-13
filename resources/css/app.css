@@ -124,6 +124,8 @@
 body {
     font-family: 'Calibri', sans-serif;
     width: 960px;
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
     margin: 0 auto;
     margin-bottom: 50px;
     margin-top: 50px;
@@ -132,12 +134,16 @@ body {
 h2 {
   font-family: 'Saira', sans-serif;
   font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: #007ca6;
 }
 
 h3 {
   font-family: 'Saira', sans-serif;
   font-weight: 300;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
   color: #007ca6;
 }
 
