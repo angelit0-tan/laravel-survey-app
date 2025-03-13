@@ -19,7 +19,7 @@
 </template>
 <style scoped>
 .bubble {
-  right: 23%;
+  right: 20%;
   bottom: 25%;
   width: 600px;
 }
