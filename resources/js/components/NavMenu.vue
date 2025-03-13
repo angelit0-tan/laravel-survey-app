@@ -37,11 +37,12 @@ const toggleMenu = () => {
     background: white;
     right: 0px;
     top: 70px;
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+    padding-bottom: 10px;
   }
 
   li {
-    padding-right: 6rem;
+    padding-right: 5.5rem;
   }
 
   a:hover {
