@@ -242,5 +242,6 @@ const selectedAnswers = ref({});
     padding: 10px;
     padding-left: 30px;    
     padding-right: 30px;
+    font-variant: small-caps;
 }
 </style>
