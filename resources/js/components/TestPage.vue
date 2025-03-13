@@ -2,7 +2,7 @@
     <div class="mb-10">
         <my-header></my-header>
     </div>
-    <div id="willkommen" class="py-8 container">       
+    <div id="willkommen" class="container mb-10 py-8">
         <div class="p-2 mb-5">
             <h2 class="font-bold small-caps">            
                 Guten Tag.
@@ -28,8 +28,8 @@
             </p>
         </div>
     </div>
-    <div id="szenario" class="mb-5 py-8 bg-gray-100">
-        <div class="container">
+    <div id="szenario" class="bg-gray-100 py-8">
+        <div class="container mb-10 py-8">
         <h2 class="font-bold small-caps mb-5 ">Szenario:</h2>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
@@ -106,7 +106,7 @@
         </p>
     </div>
     </div>
-    <div id="umfrage" class="container p-2 mt-10">
+    <div id="umfrage" class="container mb-10 py-8 p-2">
         <h2 class="font-bold mb-5 small-caps">        
             Hier die 6 Fragen:
         </h2>
