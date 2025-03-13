@@ -2,7 +2,7 @@
     <div class="mb-10">
         <my-header></my-header>
     </div>
-    <div id="willkommen" class="py-8">       
+    <div id="willkommen" class="py-8 container">       
         <div class="p-2 mb-5">
             <h2 class="font-bold small-caps">            
                 Guten Tag.
@@ -28,7 +28,7 @@
             </p>
         </div>
     </div>
-    <div id="szenario" class="p-2 mb-5 py-8 bg-gray-100">
+    <div id="szenario" class="mb-5 py-8 bg-gray-100">
         <h2 class="font-bold small-caps mb-5">Szenario:</h2>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
@@ -104,17 +104,17 @@
             Für Ihre Antwort machen Sie bitte einfach 6 Kreuzchen bei den unten stehen kurzen Fragen:
         </p>
     </div>
-    <div id="umfrage" class="p-2 mt-96">
+    <div id="umfrage" class="container p-2 mt-10">
         <h2 class="font-bold mb-5 small-caps">        
             Hier die 6 Fragen:
         </h2>
 
-        <div class="grid grid-cols-2 mb-8 border border-black" v-for="question in questions" :key="question.id">
-            <div class="question border-r border-black p-2 row-span-4">
-                {{ question.id}}.) <span v-html="question.question" />
+        <div class="grid grid-cols-2 mb-8" v-for="question in questions" :key="question.id">
+            <div class="question borderborder-blue p-2 row-span-4">
+                <span v-html="question.question" />
             </div>
-            <div class="">
-                <div class="flex justify-between" :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
+            <div class="border border-black">
+                <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
                     <div class="p-1.5">
                         <input 
                         type="checkbox" 
@@ -132,7 +132,7 @@
             </div>
         </div>
     </div>
-    <div class="p-2">
+    <div class="container p-2">
         <p class="font-bold">
             Das war's schon.
         </p>

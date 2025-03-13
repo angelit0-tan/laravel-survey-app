@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex justify-between mb-5" 
+        <div class="container flex justify-between mb-25" 
            >
             <div 
                 class="">
@@ -12,7 +12,7 @@
             </div>
         </div>
         <div>
-          <img src="/images/header-bg.jpg" />
+          <img src="/images/header-hulst.jpg" class="w-screen mt-10"/>
         </div>
     </div>
 </template>
