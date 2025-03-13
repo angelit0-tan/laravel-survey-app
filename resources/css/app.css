@@ -155,8 +155,11 @@ h3 {
 }
 
 #umfrage {
-  background-color: #00a4dc;
   margin-top: 2225px;
+}
+
+.question {  
+  background-color: #00a4dc;
 }
 
 .small-caps {

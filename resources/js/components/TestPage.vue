@@ -110,7 +110,7 @@
         </div>
 
         <div class="grid grid-cols-2 mb-8 border border-black" v-for="question in questions" :key="question.id">
-            <div class="border-r border-black p-2 row-span-4">
+            <div class="question border-r border-black p-2 row-span-4">
                 {{ question.id}}.) <span v-html="question.question" />
             </div>
             <div class="">
@@ -223,8 +223,5 @@ const selectedAnswers = ref({});
 </script>
 
 <style scoped>
-#szenario {
-    position: absolute;
-    left: 0px;
-}
+
 </style>
