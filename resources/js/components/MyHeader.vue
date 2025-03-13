@@ -7,7 +7,7 @@
                 <img src="/images/logo.png" class="w-96 m-10" />
             </div>
             <div class="container">
-                <!-- <nav-menu></nav-menu> -->
+                <nav-menu></nav-menu>
             </div>
         </div>
         <div>
@@ -19,7 +19,7 @@
 </template>
 <style scoped>
 .bubble {
-  right: 25%;
+  right: 23%;
   bottom: 25%;
   width: 600px;
 }
