@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    width: 960px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+.small-caps {
+    font-variant: small-caps;
+}
+
+.list-dash {
+    > li {
+      @apply relative pl-2;
+  
+      &::before {
+        content: '-';
+        position: absolute;
+        top: 0;
+        right: 100%;
+      }
+    }
+  }
