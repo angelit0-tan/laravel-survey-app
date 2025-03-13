@@ -153,7 +153,7 @@
         
     </div>
 
-    <div class="container text-center py-8">
+    <div class="container text-center py-20">
         <button class="send-button">Jetzt Absenden</button>
     </div>
 </template>
@@ -236,10 +236,11 @@ const selectedAnswers = ref({});
 .send-button {
     background-color: #00a4dc;
     color: white;
-    padding: 10px;
     border-radius: 10px;
-    font-weight: 700;
-    padding-left: 20px;    
-    padding-right: 20px;
+    font-size: larger;
+    font-weight: 800;
+    padding: 10px;
+    padding-left: 30px;    
+    padding-right: 30px;
 }
 </style>
