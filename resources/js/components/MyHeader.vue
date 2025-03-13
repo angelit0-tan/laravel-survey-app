@@ -1,19 +1,19 @@
 <template>
-    <div>
-        <div class="container flex justify-between mb-25" 
+    <div class="">
+        <div class="flex justify-between my-5 mt-0" 
            >
             <div 
                 class="">
-                <img src="/images/logo.png" class="w-80" />
+                <img src="/images/logo.png" class="w-96" />
             </div>
-            <div 
-                >
+            <div class="container">
                 <nav-menu></nav-menu>
             </div>
         </div>
         <div>
-          <img src="/images/header-hulst.jpg" class="w-screen mt-10"/>
+          <img src="/images/header-hulst.jpg" class="w-screen"/>
         </div>
+        
     </div>
 </template>
 <!-- <style scoped>

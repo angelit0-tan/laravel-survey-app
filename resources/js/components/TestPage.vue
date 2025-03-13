@@ -147,7 +147,7 @@
             Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
         </p>            
         <p class="mb-5">
-            hre E-Mail-Adresse: <input class="ml-2 border-b border-rose-400" type="text" />
+            Ihre E-Mail-Adresse: <input class="ml-2 border-b border-rose-400" type="text" />
         </p>
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
