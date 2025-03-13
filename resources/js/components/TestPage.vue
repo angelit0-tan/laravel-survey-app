@@ -29,7 +29,8 @@
         </div>
     </div>
     <div id="szenario" class="mb-5 py-8 bg-gray-100">
-        <h2 class="font-bold small-caps mb-5">Szenario:</h2>
+        <div class="container">
+        <h2 class="font-bold small-caps mb-5 ">Szenario:</h2>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
         
@@ -103,6 +104,7 @@
         <p class="font-bold mb-5">            
             Für Ihre Antwort machen Sie bitte einfach 6 Kreuzchen bei den unten stehen kurzen Fragen:
         </p>
+    </div>
     </div>
     <div id="umfrage" class="container p-2 mt-10">
         <h2 class="font-bold mb-5 small-caps">        
