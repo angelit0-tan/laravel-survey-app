@@ -28,7 +28,7 @@
             Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
         </p>
     </div>
-    <div id="szenario" class="p-2 mb-5">
+    <div id="szenario" class="p-2 mb-5 bg-gray-100">
         <h class="font-bold small-caps mb-5 text-2xl">Szenario:</h>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
