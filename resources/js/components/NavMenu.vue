@@ -12,7 +12,7 @@
     <ul
       class="flex absolute bg-white font-bold"
     >
-      <li><a @click="toggleMenu" href="#willkommen">Worum Es Geht</a></li>
+      <li><a @click="toggleMenu" href="#willkommen">Worum es Geht</a></li>
       <li><a @click="toggleMenu" href="#szenario">Szenario</a></li>
       <li><a @click="toggleMenu" href="#umfrage">6 Fragen</a></li>
     </ul>
@@ -37,7 +37,7 @@ const toggleMenu = () => {
     background: white;
     right: 0px;
     top: 70px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     padding-bottom: 10px;
     font-variant: small-caps;
   }
