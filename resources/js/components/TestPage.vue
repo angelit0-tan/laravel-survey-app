@@ -2,31 +2,31 @@
     <div class="mb-10">
         <my-header></my-header>
     </div>
-    <div id="willkommen" class="p-2">
-        <h2 class="font-bold small-caps">            
-            Guten Tag.
-        </h2>
-    </div>
-    <div class="p-2 mb-5">
-        <p class="font-bold my-5">
-            Hier eine kurze Meinungsumfrage; sie richtet sich an die Bewohner von Hulst und Umgebung:
-        </p>
+    <div id="willkommen" class="py-6">       
+        <div class="p-2 mb-5">
+            <h2 class="font-bold small-caps">            
+                Guten Tag.
+            </h2>
+            <p class="font-bold my-5">
+                Hier eine kurze Meinungsumfrage; sie richtet sich an die Bewohner von Hulst und Umgebung:
+            </p>
 
-        <h3 class="font-bold small-caps">Worum geht es?</h3>
-        <p class="mb-5">            
-            Die Hulster Stadtverwaltung und ihre Bürgermeisterin. – Ihre Meinung zählt!
-        </p>
+            <h3 class="font-bold small-caps">Worum geht es?</h3>
+            <p class="mb-5">            
+                Die Hulster Stadtverwaltung und ihre Bürgermeisterin. – Ihre Meinung zählt!
+            </p>
 
-        <h3 class="font-bold small-caps">Warum sollten Sie teilnehmen?</h3>
-        <p class="mb-5">            
-            Unter allen Teilnehmern werden zehn Direktgewinne zu je 100 Euro verlost – für nur fünf Minuten Ihrer Zeit. 
-        </p>
+            <h3 class="font-bold small-caps">Warum sollten Sie teilnehmen?</h3>
+            <p class="mb-5">            
+                Unter allen Teilnehmern werden zehn Direktgewinne zu je 100 Euro verlost – für nur fünf Minuten Ihrer Zeit. 
+            </p>
 
-        <h3 class="font-bold small-caps">Wie läuft es ab?</h3>
-        <p class="mb-5">            
-            Sie lesen das unten stehende Szenario und beantworten sechs kurze Fragen. – Sie müssen nur ankreuzen.
-            Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
-        </p>
+            <h3 class="font-bold small-caps">Wie läuft es ab?</h3>
+            <p class="mb-5">            
+                Sie lesen das unten stehende Szenario und beantworten sechs kurze Fragen. – Sie müssen nur ankreuzen.
+                Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
+            </p>
+        </div>
     </div>
     <div id="szenario" class="p-2 mb-5 py-8 bg-gray-100">
         <h2 class="font-bold small-caps mb-5">Szenario:</h2>
@@ -105,9 +105,9 @@
         </p>
     </div>
     <div id="umfrage" class="p-2 mt-96">
-        <div class="font-bold mb-5 small-caps text-xl">        
+        <h2 class="font-bold mb-5 small-caps">        
             Hier die 6 Fragen:
-        </div>
+        </h2>
 
         <div class="grid grid-cols-2 mb-8 border border-black" v-for="question in questions" :key="question.id">
             <div class="question border-r border-black p-2 row-span-4">
