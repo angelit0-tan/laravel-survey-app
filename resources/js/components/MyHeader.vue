@@ -20,7 +20,7 @@
 <style scoped>
 .bubble {
   right: 5%;
-  bottom: 30%;
+  bottom: 25%;
   width: 600px;
 }
 </style>
