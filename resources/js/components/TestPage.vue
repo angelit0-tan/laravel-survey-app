@@ -1,35 +1,35 @@
 <template>
-    <div class="text-xl small-caps mb-5 font-bold">
-        +  Meinungsumfrage Hulst- Vsn 3d
+    <div class="mb-10">
+        <my-header></my-header>
     </div>
-    <div class="bg-gray-300 border border-black p-2 text-xl">
-        <p class="font-bold small-caps">            
+    <div id="willkommen" class="p-2">
+        <h2 class="font-bold small-caps">            
             Guten Tag.
-        </p>
+        </h2>
     </div>
-    <div class="border border-black p-2 mb-5">
-        <p class="font-bold my-5 text-lg">
+    <div class="p-2 mb-5">
+        <p class="font-bold my-5">
             Hier eine kurze Meinungsumfrage; sie richtet sich an die Bewohner von Hulst und Umgebung:
         </p>
 
-        <p class="font-bold small-caps text-lg">Worum geht es?</p>
+        <h3 class="font-bold small-caps">Worum geht es?</h3>
         <p class="mb-5">            
             Die Hulster Stadtverwaltung und ihre Bürgermeisterin. – Ihre Meinung zählt!
         </p>
 
-        <p class="font-bold small-caps text-lg">Warum sollten Sie teilnehmen?</p>
+        <h3 class="font-bold small-caps">Warum sollten Sie teilnehmen?</h3>
         <p class="mb-5">            
             Unter allen Teilnehmern werden zehn Direktgewinne zu je 100 Euro verlost – für nur fünf Minuten Ihrer Zeit. 
         </p>
 
-        <p class="font-bold small-caps text-lg">Wie läuft es ab?</p>
+        <h3 class="font-bold small-caps">Wie läuft es ab?</h3>
         <p class="mb-5">            
             Sie lesen das unten stehende Szenario und beantworten sechs kurze Fragen. – Sie müssen nur ankreuzen.
             Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
         </p>
     </div>
-    <div class="border border-black p-2 mb-5">
-        <p class="font-bold small-caps mb-5 text-lg">Szenario:</p>
+    <div id="szenario" class="p-2 mb-5 py-8 bg-gray-100">
+        <h2 class="font-bold small-caps mb-5">Szenario:</h2>
 
         <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
         
@@ -105,15 +105,11 @@
         </p>
     </div>
 
-    <div class="font-bold mb-5 small-caps text-xl">
-        Bitte blättern Sie um!
-    </div>
-
-    <div class="font-bold mb-5 small-caps text-xl">        
+    <div id="umfrage" class="font-bold mb-5 small-caps text-xl">        
         Hier die 6 Fragen:
     </div>
 
-    <div class="grid grid-cols-2 mb-5 border border-black" v-for="question in questions" :key="question.id">
+    <div class="grid grid-cols-2 mb-8 border border-black" v-for="question in questions" :key="question.id">
         <div class="border-r border-black p-2 row-span-4">
             {{ question.id}}.) <span v-html="question.question" />
         </div>
@@ -135,11 +131,8 @@
             </div>
         </div>
     </div>
-    <div class="border-r border-l border-t border-black py-3 mt-16">
-
-    </div>
-    <div class="grid grid-cols-2 border border-black">
-        <div class="border-r border-black p-2">
+    <div class="grid grid-cols-2 ">
+        <div class="p-2">
             <p class="font-bold">
                 Das war's schon.
             </p>
@@ -173,12 +166,6 @@ const questions = [
             'nicht verhältnismäßig',
             'im ausgewogenen Verhältnis.'
         ],
-        scores: [
-            '-2',
-            '-1',
-            '+1',
-            '+2'
-        ],
     },
     {
         id: 2,
@@ -199,12 +186,6 @@ const questions = [
             'gerechtfertigt',
             'sehr gerechtfertigt'
         ],
-        scores: [
-            '-2',
-            '-1',
-            '+1',
-            '+2'
-        ],
     },
     {
         id: 4,
@@ -214,12 +195,6 @@ const questions = [
             'inakzeptabel',
             'akzeptabel',
             'völlig akzeptabel'
-        ],
-        scores: [
-            '-2',
-            '-1',
-            '+1',
-            '+2'
         ],
     },
     {
@@ -247,3 +222,9 @@ const questions = [
 const selectedAnswers = ref({});
 
 </script>
+
+<style scoped>
+#szenario {
+    display: absolute;
+}
+</style>

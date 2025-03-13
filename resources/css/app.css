@@ -2,12 +2,151 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Saira */
+@font-face {
+  font-family: Saira;
+  font-weight: 300;
+  src: url('/fonts/saira/saira-light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 300;
+  font-style: italic;
+  src: url('/fonts/saira/saira-light-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 400;
+  src: url('/fonts/saira/saira-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 400;
+  font-style: italic;
+  src: url('/fonts/saira/saira-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 500;
+  src: url('/fonts/saira/saira-medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 500;
+  font-style: italic;
+  src: url('/fonts/saira/saira-medium-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 600;
+  src: url('/fonts/saira/saira-semibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 600;
+  font-style: italic;
+  src: url('/fonts/saira/saira-semibold-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 700;
+  src: url('/fonts/saira/saira-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 700;
+  font-style: italic;
+  src: url('/fonts/saira/saira-bold-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 900;
+  src: url('/fonts/saira/saira-black.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Saira;
+  font-weight: 900;
+  font-style: italic;
+  src: url('/fonts/saira/saira-black-italic.ttf') format('truetype');
+}
+
+/* Calibri */
+@font-face {
+  font-family: Calibri;
+  font-weight: 300;
+  src: url('/fonts/calibri/calibri-light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Calibri;
+  font-weight: 300;
+  font-style: italic;
+  src: url('/fonts/calibri/calibri-light-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Calibri;
+  font-weight: 400;
+  src: url('/fonts/calibri/calibri-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Calibri;
+  font-weight: 400;
+  font-style: italic;
+  src: url('/fonts/calibri/calibri-italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Calibri;
+  font-weight: 700;
+  src: url('/fonts/calibri/calibri-bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Calibri;
+  font-weight: 700;
+  font-style: italic;
+  src: url('/fonts/calibri/calibri-bold-italic.ttf') format('truetype');
+}
+
 body {
+    font-family: 'Calibri', sans-serif;
     width: 960px;
+    font-size: 1.3rem;
+    line-height: 2.15rem;
     margin: 0 auto;
     margin-bottom: 50px;
     margin-top: 50px;
 }
+
+h2 {
+  font-family: 'Saira', sans-serif;
+  font-weight: 500;
+  font-size: 1.875rem; 
+  line-height: 2.25rem;
+  color: #007ca6;
+}
+
+h3 {
+  font-family: 'Saira', sans-serif;
+  font-weight: 500;
+  font-size: 1.45rem;
+  line-height: 1.75rem;
+  color: #007ca6;
+}
+
 .small-caps {
     font-variant: small-caps;
 }
