@@ -24,7 +24,8 @@
             <h3 class="font-bold small-caps">Wie läuft es ab?</h3>
             <p class="mb-5">            
                 Sie lesen das unten stehende Szenario und beantworten sechs kurze Fragen. – Sie müssen nur ankreuzen.
-                Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.
+                Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.<br />
+                Wenn Sie das Szenario bereits gelesen haben, kommen Sie hier <a href="#umfrage" class="questions-link underline small-caps">direkt zu den Fragen</a>.
             </p>
         </div>
     </div>
@@ -123,6 +124,8 @@
                         type="checkbox" 
                         :id="`question-${question.id}-choice-${index}`" 
                         :value="choice"
+                        :checked="selectedOption[question.id] === index"
+                        @change="selectOnlyOne(question.id, index)"
                         />
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
                             <span v-html="choice" />
@@ -224,8 +227,14 @@ const questions = [
     },
 ];
 
-const selectedAnswers = ref({});
-
+const selectedOption = ref({});
+const selectOnlyOne = (questionId, selectedChoice) => {
+    // if (questionId === 6) {
+    //     selectedOption.value = selectedChoice; 
+    //     return;
+    // }
+    selectedOption.value = { ...selectedOption.value, [questionId]: selectedChoice };
+};
 </script>
 
 <style scoped>
@@ -255,5 +264,9 @@ const selectedAnswers = ref({});
     font-family: 'Saria', sans-serif;
     top: 0px;
     left: -4rem;
+}
+
+.questions-link {
+    color: #00a4dc;
 }
 </style>

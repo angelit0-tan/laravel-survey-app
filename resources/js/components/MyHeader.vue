@@ -10,8 +10,8 @@
                 <nav-menu></nav-menu>
             </div>
         </div>
-        <div>
-          <img src="/images/header-hulst.jpg" class="relative w-screen"/>
+        <div class="relative">
+          <img src="/images/header-hulst.jpg" class="w-screen"/>
           <img src="/images/bubble.png" class="bubble absolute w-96"/>
         </div>
         
@@ -20,7 +20,7 @@
 <style scoped>
 .bubble {
   right: 20%;
-  bottom: 25%;
+  bottom: -12%;
   width: 600px;
 }
 </style>
