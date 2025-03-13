@@ -112,7 +112,7 @@
         </h2>
 
         <div class="grid grid-cols-2 mb-8" v-for="question in questions" :key="question.id">
-            <div class="question borderborder-blue p-2 row-span-4">
+            <div class="question p-2 row-span-4 p-5 text-white">
                 <span v-html="question.question" />
             </div>
             <div class="border border-black">
