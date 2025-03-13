@@ -123,7 +123,6 @@
                     <input 
                     type="checkbox" 
                     :id="`question-${question.id}-choice-${index}`" 
-                    v-model="selectedAnswers[question.id][index]"
                     :value="choice"
                     />
                     <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
