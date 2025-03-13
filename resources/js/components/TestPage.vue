@@ -112,8 +112,9 @@
         </h2>
 
         <div class="grid grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
-            <div class="question row-span-4 p-6 text-white">
-                <span v-html="question.question" />
+            <div class="question row-span-4 p-6 text-white relative">                
+                <span v-html="question.question" />      
+                <div class="absolute question-number">{{ question.id }}</div>          
             </div>
             <div class="border border-black">
                 <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
@@ -243,5 +244,16 @@ const selectedAnswers = ref({});
     padding-left: 30px;    
     padding-right: 30px;
     font-variant: small-caps;
+}
+
+.question-number {
+    color: white;
+    background-color: #00a4dc;
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    font-family: 'Saria', sans-serif;
+    top: 0px;
+    left: -4rem;
 }
 </style>
