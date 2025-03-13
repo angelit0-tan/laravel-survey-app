@@ -107,11 +107,11 @@
         </div>
     </div>
     <div id="umfrage" class="container mb-10 py-8 p-2">
-        <h2 class="font-bold mb-5 small-caps">        
+        <h2 class="font-bold mb-6 small-caps">        
             Hier die 6 Fragen:
         </h2>
 
-        <div class="grid grid-cols-2 mb-8" v-for="question in questions" :key="question.id">
+        <div class="grid grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
             <div class="question row-span-4 p-6 text-white">
                 <span v-html="question.question" />
             </div>
@@ -131,7 +131,7 @@
             </div>
         </div>
     </div>
-    <div class="container p-2">
+    <div class="container mb-10 p-2">
         <p class="font-bold">
             Das war's schon.
         </p>
@@ -149,6 +149,12 @@
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
         </p>
+        
+        
+    </div>
+
+    <div class="container text-center py-8">
+        <button class="send-button">Jetzt Absenden</button>
     </div>
 </template>
 <script setup>
@@ -225,5 +231,15 @@ const selectedAnswers = ref({});
 .email {
     border-bottom: 2px solid #00a4dc;
     width: 30rem;
+}
+
+.send-button {
+    background-color: #00a4dc;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 700;
+    padding-left: 20px;    
+    padding-right: 20px;
 }
 </style>
