@@ -12,6 +12,9 @@ app.component('NavMenu',
 app.component('MyHeader',
     defineAsyncComponent(() => import('./components/MyHeader.vue'))
 );
+app.component('LoginPage',
+    defineAsyncComponent(() => import('./components/Login.vue'))
+);
 
 
 app.mount('#app');
