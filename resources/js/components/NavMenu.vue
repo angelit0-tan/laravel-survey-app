@@ -1,20 +1,28 @@
 <template>
-  <nav class="">
-    <div class="flex justify-between ">
-      <h1 class="text-xl font-bold"></h1>
+  <nav class="flex justify-end ">
+    <div class="">
 
-      <!-- Menu Toggle Button -->
-      <!-- <button type="button" @click="toggleMenu">
-        <img src="/images/menu.png" alt="Open Menu" class="w-8 h-8">
-      </button> -->
+    <!-- Menu Toggle Button -->
+    <button type="button" class="lg:hidden z-50 mr-6" @click="toggleMenu">
+      <img src="/images/menu.png" alt="Open Menu" class="w-10 h-10">
+    </button>
 
     <!-- Navigation Links -->
     <ul
-      class="flex absolute bg-white font-bold"
+      class="hidden lg:flex absolute bg-white font-bold lg-menu"
     >
       <li><a @click="toggleMenu" href="#willkommen">Worum es Geht</a></li>
       <li><a @click="toggleMenu" href="#szenario">Szenario</a></li>
       <li><a @click="toggleMenu" href="#umfrage">6 Fragen</a></li>
+    </ul>
+
+    <ul
+      v-show="isOpen"
+      class="absolute bg-white font-bold z-50 mt-5 sm-menu"
+    >
+      <a @click="toggleMenu" href="#willkommen"><li>Worum es Geht</li></a>
+      <a @click="toggleMenu" href="#szenario"><li>Szenario</li></a>
+      <a @click="toggleMenu" href="#umfrage"><li>6 Fragen</li></a>
     </ul>
     </div>
   </nav>
@@ -42,13 +50,21 @@ const toggleMenu = () => {
     font-variant: small-caps;
   }
 
-  li {
+  .lg-menu li {
     padding-right: 5.5rem;
 
   }
 
-  a:hover {
+  .lg-menu a:hover {
     text-decoration-line: underline;
     color:#185e76;
+  }
+
+  .sm-menu li:hover {
+    background-color:#a1d9ec;
+  }
+
+  .sm-menu a li {
+    padding: 10px;
   }
 </style>

@@ -6,7 +6,7 @@
                 class="">
                 <img src="/images/logo.png" class="w-96 m-10" />
             </div>
-            <div class="container">
+            <div class="container self-center">
                 <nav-menu></nav-menu>
             </div>
         </div>
