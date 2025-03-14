@@ -16,7 +16,7 @@ class PasswordProtect
     public function handle(Request $request, Closure $next): Response
     {
         if (!session()->has('password_protect')) {
-            return abort(404);
+            return redirect('/login');
         }
         return $next($request);
     }
