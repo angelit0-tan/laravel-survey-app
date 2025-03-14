@@ -119,7 +119,7 @@
             <div class="border border-black">
                 <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.options" :key="choice.id">
                     <div class="p-2.5">
-                        <input 
+                        <!-- <input 
                         type="checkbox" 
                         :id="`question-${question.id}-choice-${index}`" 
                         :value="choice"
@@ -127,6 +127,13 @@
                         ? form.selectedOption[question.id].includes(index) 
                         : form.selectedOption[question.id] === index"
                         @change="selectOnlyOne(question.id, index)"                        
+                        /> -->
+                        <input 
+                        :type="question.id < 6 ? 'radio' : 'checkbox'"
+                        v-model="question.answers"
+                        :id="`question-${question.id}-choice-${index}`" 
+                        :value="choice.id"
+                        @change="selectOnlyOne(question.id, choice.id)"                
                         />
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
                             <span v-html="choice.name" />
@@ -150,7 +157,7 @@
             Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
         </p>            
         <p class="mb-5">
-            Ihre E-Mail-Adresse: <input type="email" v-model="form.email" class="email ml-2" />
+            Ihre E-Mail-Adresse: <input type="email" v-model="email" class="email ml-2" />
         </p>
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
@@ -158,52 +165,93 @@
     </div>
 
     <div class="container text-center py-20">
-        <button @click="submit" class="send-button">Jetzt Absenden</button>
+        <button type="button" @click="submit()" class="send-button mb-10">Jetzt Absenden</button>
+        <p v-if="error" v-html="error" class="text-red-500"></p>
     </div>
 </template>
 <script setup>
     import { onMounted, ref } from 'vue';
     import axios from 'axios';
     const questions = ref(null);
-    const form = ref({
-        email: null,
-        selectedOption: {}
-    });
+    const email = ref(null);
+    const option = ref([]);
+    const error = ref(null);
     const selectOnlyOne = (questionId, selectedChoice) => {
-    if (questionId === 6) {
-        // Get the current selections for question 6
-        let choices = form.value.selectedOption[questionId] || [];
-        // If the selected choice is "1", clear everything and keep only "1"
-        if (selectedChoice === 0) {
-            form.value.selectedOption[questionId] = 0;
-        } else {
-            // If "0" is already selected, replace it with the new choice
-            if (choices.includes(0)) {
-                form.value.selectedOption[questionId] = [selectedChoice]; // Replace 0 with new choice
+        if (questionId === 6) {
+            if (selectedChoice === 21) {
+                    const arr = questions.value.find((item) => item.id === questionId).answers.filter(function(item) {
+                        return item === selectedChoice
+                    });
+                    questions.value.find((item) => item.id === questionId).answers = arr;
             } else {
-                // Toggle selection: Remove if exists, otherwise add it
-                form.value.selectedOption[questionId] = choices.includes(selectedChoice)
-                    ? choices.filter(choice => choice !== selectedChoice) 
-                    : [...choices, selectedChoice];
+                if (questions.value.find((item) => item.id === questionId).answers.includes(21)) {
+                    const arr = questions.value.find((item) => item.id === questionId).answers.filter(function(item) {
+                        return item !== 21
+                    });
+                    questions.value.find((item) => item.id === questionId).answers = arr;
+                }
             }
         }
-        return;
-    }
-
-    // Toggle selection for single-choice questions
-    form.value.selectedOption = {
-        ...form.value.selectedOption,
-        [questionId]: form.value.selectedOption[questionId] === selectedChoice ? null : selectedChoice
     };
-};
-        onMounted(async() => {
-        const { data } = await axios.get('/questions');
-        questions.value = data;
-    })
 
-    const submit = () => {
+    const isValidEmail = (email) => {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailPattern.test(email);
+    };
+    // const checkEmailExists = async (email) => {
+    //     try {
+    //         const response = await axios.get("/answers", {
+    //         params: { email: email.value } // Correct way to pass query parameters in GET requests
+    //         });
+    //         return response.data.exists; // Assume API returns { exists: true/false }
+    //     } catch (error) {
+    //         console.error("Error checking email:", error);
+    //         return false; // Assume email is not registered if an error occurs
+    //     }
+    // };
+    const submit = async () => {
+        // console.log(checkEmailExists(email.value))
+        error.value="";
+        const allQuestionsAnswered = questions.value.every(q => 
+            Array.isArray(q.answers) ? q.answers.length > 0 : q.answers !== undefined
+        );
+
+        if(!allQuestionsAnswered)
+            error.value="Please answer all questions. <br />"; 
         
-    }
+        if(!email.value)
+            error.value +="Please enter your email address";
+
+        else if (!isValidEmail(email.value))
+            error.value+="Please enter a valid email address";
+
+        if(error.value) 
+            return;
+
+        const answers = questions.value.map((item) => item.answers);
+        try {
+            await axios.post("/answers", {'email' : email.value, 'answers': answers.flat()});
+            alert("Answer submitted successfully!");
+            questions.value.forEach(q => q.answers = []);
+            email.value = "";
+        } catch (error) {
+            console.error("Submission failed:", error);
+            alert("There was an error submitting your answers. Please try again.");
+        }
+    };
+
+    
+    onMounted(async() => {
+        const { data } = await axios.get('/questions');
+        questions.value = data.map((item) => {
+            return {
+                id: item.id,
+                name: item.name,
+                options: item.options,
+                answers: []
+            }
+        });
+    })
 </script>
 
 <style scoped>
@@ -238,4 +286,35 @@
 .questions-link {
     color: #00a4dc;
 }
+
+input[type="radio"],
+input[type="checkbox"] {
+    appearance: none; /* Hide default appearance */
+    width: 22px;
+    height: 22px;
+    content: none;
+    outline: none;
+    margin: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+}
+
+/* Add checkmark when checked */
+input[type="radio"]:checked::before,
+input[type="checkbox"]:checked::before {
+position: absolute;
+  color: #00a4dc !important;
+  content: "\00A0\2713\00A0" !important;
+  font-weight: bolder;
+  font-size: 17px;
+  bottom:-8px;
+  left: 1px;
+}
+
+/* Customize background color when checked */
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    border-color: #ccc; /* Dark blue */
+}
+
 </style>
