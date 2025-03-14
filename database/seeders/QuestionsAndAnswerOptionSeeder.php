@@ -17,7 +17,7 @@ class QuestionsAndAnswerOptionSeeder extends Seeder
         $questions = collect([
             'question1' => [
                 'name' => 'Wie bewerten Sie die <span class="font-bold">"Verhältnismäßigkeit"</span> zwischen dem Kaufwert eines Hauses in Höhe 300.000 Euro und hierfür anschließend verlangten "Instandhaltungs"-Kosten in Höhe von 2,2 Millionen Euro?',
-                'options' => ['extrem un-verhältnismäßig','stark un-verhältnismäßig','nicht verhältnismäßig', 'im ausgewogenen Verhältnis']
+                'options' => ['extrem <span class="italic">un</span>-verhältnismäßig','stark <span class="italic">un</span>-verhältnismäßig','nicht verhältnismäßig', 'im ausgewogenen Verhältnis']
             ],
             'questions2' => [
                 'name' => 'Wenn bei einem Haus im Kaufwert von 300.000 Euro Baumaßnahmen von <span class="font-bold">2,2 Millionen Euro</span> notwendig werden, handelt es sich dann entweder nur um Kosten für "Instandhaltung", oder aber für "Restaurierung"?',
