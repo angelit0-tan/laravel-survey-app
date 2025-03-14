@@ -109,7 +109,7 @@
     </div>
     <div id="umfrage" class="container mb-10 py-8 p-2">
         <h2 class="font-bold mb-6 small-caps">
-            Hier die 6 Fragen:{{ selectedOption }}
+            Hier die 6 Fragen:
         </h2>
         <div class="grid lg:grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
             <div class="question row-span-4 p-6 text-white relative">
