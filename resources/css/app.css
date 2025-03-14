@@ -123,12 +123,9 @@
 
 body {
     font-family: 'Calibri', sans-serif;
-    width: 960px;
     font-size: 1.3rem;
     line-height: 2.15rem;
-    margin: 0 auto;
     margin-bottom: 50px;
-    margin-top: 50px;
 }
 
 h2 {
@@ -145,6 +142,24 @@ h3 {
   font-size: 1.45rem;
   line-height: 1.75rem;
   color: #007ca6;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+#szenario {
+  /* padding-left: 28rem;
+  padding-right: 28rem; */
+}
+
+#umfrage {
+  /* margin-top: 2225px; */
+}
+
+.question {  
+  background-color: #00a4dc;
 }
 
 .small-caps {

@@ -1,23 +1,22 @@
 <template>
-  <nav class="p-4">
-    <div class="flex justify-between items-center">
+  <nav class="">
+    <div class="flex justify-between ">
       <h1 class="text-xl font-bold"></h1>
 
       <!-- Menu Toggle Button -->
-      <button type="button" @click="toggleMenu" class="">
+      <!-- <button type="button" @click="toggleMenu">
         <img src="/images/menu.png" alt="Open Menu" class="w-8 h-8">
-      </button>
-    </div>
+      </button> -->
 
     <!-- Navigation Links -->
     <ul
-      :class="isOpen ? 'block' : 'hidden'"
-      class="absolute bg-white color-blue"
+      class="flex absolute bg-white font-bold"
     >
-      <li><a @click="toggleMenu" href="#willkommen" class="block p-2 hover:bg-blue-700 rounded">Willkommen</a></li>
-      <li><a @click="toggleMenu" href="#szenario" class="block p-2 hover:bg-blue-700 rounded">Szenario</a></li>
-      <li><a @click="toggleMenu" href="#umfrage" class="block p-2 hover:bg-blue-700 rounded">Umfrage</a></li>
+      <li><a @click="toggleMenu" href="#willkommen">Worum es Geht</a></li>
+      <li><a @click="toggleMenu" href="#szenario">Szenario</a></li>
+      <li><a @click="toggleMenu" href="#umfrage">6 Fragen</a></li>
     </ul>
+    </div>
   </nav>
 </template>
 
@@ -33,9 +32,23 @@ const toggleMenu = () => {
 
 <style scoped>
   ul {
+    font-family: 'Saria', sans-serif;
     color: #007ca6;
     background: white;
-    right: 430px;
-    font-size: 1.25rem;
+    right: 0px;
+    top: 70px;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    font-variant: small-caps;
+  }
+
+  li {
+    padding-right: 5.5rem;
+
+  }
+
+  a:hover {
+    text-decoration-line: underline;
+    color:#185e76;
   }
 </style>

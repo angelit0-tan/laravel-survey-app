@@ -14,7 +14,7 @@
 </head>
 <body class="bg-white">
     <div id="app">
-        <div class="container mx-auto">
+        <div class="">
             @yield('content')
         </div>
     </div>
