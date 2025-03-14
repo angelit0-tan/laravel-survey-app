@@ -123,9 +123,9 @@
                         type="checkbox" 
                         :id="`question-${question.id}-choice-${index}`" 
                         :value="choice"
-                        :checked="Array.isArray(selectedOption[question.id]) 
-                        ? selectedOption[question.id].includes(index) 
-                        : selectedOption[question.id] === index"
+                        :checked="Array.isArray(form.selectedOption[question.id]) 
+                        ? form.selectedOption[question.id].includes(index) 
+                        : form.selectedOption[question.id] === index"
                         @change="selectOnlyOne(question.id, index)"                        
                         />
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
@@ -150,7 +150,7 @@
             Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
         </p>            
         <p class="mb-5">
-            Ihre E-Mail-Adresse: <input class="email ml-2" type="text" />
+            Ihre E-Mail-Adresse: <input type="email" v-model="form.email" class="email ml-2" />
         </p>
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
@@ -158,46 +158,52 @@
     </div>
 
     <div class="container text-center py-20">
-        <button class="send-button">Jetzt Absenden</button>
+        <button @click="submit" class="send-button">Jetzt Absenden</button>
     </div>
 </template>
 <script setup>
     import { onMounted, ref } from 'vue';
     import axios from 'axios';
     const questions = ref(null);
-
-    const selectedOption = ref({});
+    const form = ref({
+        email: null,
+        selectedOption: {}
+    });
     const selectOnlyOne = (questionId, selectedChoice) => {
     if (questionId === 6) {
         // Get the current selections for question 6
-        let choices = selectedOption.value[questionId] || [];
+        let choices = form.value.selectedOption[questionId] || [];
         // If the selected choice is "1", clear everything and keep only "1"
         if (selectedChoice === 0) {
-            selectedOption.value[questionId] = 0;
+            form.value.selectedOption[questionId] = 0;
         } else {
             // If "0" is already selected, replace it with the new choice
             if (choices.includes(0)) {
-                selectedOption.value[questionId] = [selectedChoice]; // Replace 0 with new choice
+                form.value.selectedOption[questionId] = [selectedChoice]; // Replace 0 with new choice
             } else {
                 // Toggle selection: Remove if exists, otherwise add it
-                selectedOption.value[questionId] = choices.includes(selectedChoice)
-                    ? choices.filter(choice => choice !== selectedChoice) // Remove if selected
-                    : [...choices, selectedChoice]; // Add if not selected
+                form.value.selectedOption[questionId] = choices.includes(selectedChoice)
+                    ? choices.filter(choice => choice !== selectedChoice) 
+                    : [...choices, selectedChoice];
             }
         }
         return;
     }
 
     // Toggle selection for single-choice questions
-    selectedOption.value = {
-        ...selectedOption.value,
-        [questionId]: selectedOption.value[questionId] === selectedChoice ? null : selectedChoice
+    form.value.selectedOption = {
+        ...form.value.selectedOption,
+        [questionId]: form.value.selectedOption[questionId] === selectedChoice ? null : selectedChoice
     };
 };
         onMounted(async() => {
         const { data } = await axios.get('/questions');
         questions.value = data;
     })
+
+    const submit = () => {
+        
+    }
 </script>
 
 <style scoped>
