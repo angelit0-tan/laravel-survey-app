@@ -111,14 +111,13 @@
         <h2 class="font-bold mb-6 small-caps">
             Hier die 6 Fragen:
         </h2>
-
         <div class="grid lg:grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
             <div class="question row-span-4 p-6 text-white relative">
-                <span v-html="question.question" />
-                <div class="absolute top-0 lg:-left-16 -left-0 question-number">{{ question.id }}</div>          
+                <div class="absolute lg:top-0 top-6 lg:-left-16 -left-0 question-number">{{ question.id }}</div>               
+                <div class="lg:ml-0 ml-6"><span v-html="question.name" /></div>
             </div>
             <div class="border border-black">
-                <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
+                <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.options" :key="choice.id">
                     <div class="p-2.5">
                         <input 
                         type="checkbox" 
@@ -128,13 +127,14 @@
                         @change="selectOnlyOne(question.id, index)"
                         />
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
-                            <span v-html="choice" />
+                            <span v-html="choice.name" />
                         </label>
                     </div>
                 </div>
             </div>
-        </div>{{ selectedOption }}
+        </div>
     </div>
+    
     <div class="container mb-10 p-2">
         <p class="font-bold">
             Das war's schon.
@@ -153,8 +153,6 @@
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
         </p>
-        
-        
     </div>
 
     <div class="container text-center py-20">
@@ -162,87 +160,30 @@
     </div>
 </template>
 <script setup>
-import { ref } from 'vue';
+    import { onMounted, ref } from 'vue';
+    import axios from 'axios';
+    const questions = ref(null);
 
-const questions = [
-    {
-        id: 1,
-        question: 'Wie bewerten Sie die <span class="font-bold">"Verhältnismäßigkeit"</span> zwischen dem Kaufwert eines Hauses in Höhe 300.000 Euro und hierfür anschließend verlangten "Instandhaltungs"-Kosten in Höhe von 2,2 Millionen Euro?',
-        choices: [
-            'extrem <span class="italic">un</span>-verhältnismäßig',
-            'stark <span class="italic">un</span>-verhältnismäßig',
-            'nicht verhältnismäßig',
-            'im ausgewogenen Verhältnis.'
-        ],
-    },
-    {
-        id: 2,
-        question: 'Wenn bei einem Haus im Kaufwert von 300.000 Euro Baumaßnahmen von <span class="font-bold">2,2 Millionen Euro</span> notwendig werden, handelt es sich dann entweder nur um Kosten für "Instandhaltung", oder aber für "Restaurierung"?',
-        choices: [
-            'eindeutig "Restaurierungs"-Kosten',
-            'enorm hohe, aber nicht klar definierbare Kosten',
-            'weiß nicht',
-            'eindeutig nur "Instandhaltungs"-Kosten'
-        ],
-    },
-    {
-        id: 3,
-        question: 'Wie finden Sie das Verhalten der Stadtverwaltung Hulst, einen Bürger - zwecks "Instandhaltung" seines denkmalgeschützten Hauses – mit einer <span class="font-bold">Strafe von 600.000 Euro</span> zu bedrohen?',
-        choices: [
-            'überhaupt nicht gerechtfertigt',
-            'nicht gerechtfertigt',
-            'gerechtfertigt',
-            'sehr gerechtfertigt'
-        ],
-    },
-    {
-        id: 4,
-        question: 'Wie finden Sie es, wenn die <span class="font-bold">Bürgermeisterin</span> von Hulst schriftliche, mehrfach wiederholte Anfragen eines Bürgers nicht einmal beantwortet?',
-        choices: [
-            'sehr inakzeptabel',
-            'inakzeptabel',
-            'akzeptabel',
-            'völlig akzeptabel'
-        ],
-    },
-    {
-        id: 5,
-        question: 'Was würden Sie einem Bürger von Hulst <span class="font-bold">empfehlen</span>, von dem die Stadtverwaltung / die Bürgermeisterin für die (faktisch unmögliche) Nicht-Einhaltung eines Instandhaltungs-Termins eine Strafe von 600.000 Euro kassiert?',
-        choices: [
-            'Strafanzeige wegen Nötigung/Erpressung',
-            'Öffentlicher Protest',
-            'Umziehen in einer andere Stadt',
-            'Nix. So kommt doch Geld in die Stadtkasse.'
-        ],
-    },
-    {
-        id: 6,
-        question: 'Was würden <span class="font-bold">Sie persönlich</span> wohl am liebsten tun, wenn Sie in dieser Situation wären?<br />(Sie können hier <span class="italic">mehrere</span> Antworten ankreuzen.)',
-        choices: [
-            'Ich würde nichts tun.',
-            'Ich würde rechtliche Schritte einleiten.',
-            'Ich würde politisch aktiv werden.',
-            'Ich würde öffentlich protestieren.'
-        ],
-    },
-];
-
-const selectedOption = ref({});
-const selectOnlyOne = (questionId, selectedChoice) => {
-    if (questionId === 6) {
-        // If the user selects "1", clear all other selected options
-        if (selectedChoice === "1") {
-            selectedOption.value[questionId] = ["1"]; // Reset to only "1"
-        } else {
-            // If "1" is already selected, remove it and then add the new choice
-            let choices = selectedOption.value[questionId] || [];
-            choices = choices.includes("1") ? [selectedChoice] : [...choices, selectedChoice];
-            selectedOption.value[questionId] = choices;
+    const selectedOption = ref({});
+    const selectOnlyOne = (questionId, selectedChoice) => {
+        if (questionId === 6) {
+            // If the user selects "1", clear all other selected options
+            if (selectedChoice === "1") {
+                selectedOption.value[questionId] = ["1"]; // Reset to only "1"
+            } else {
+                // If "1" is already selected, remove it and then add the new choice
+                let choices = selectedOption.value[questionId] || [];
+                choices = choices.includes("1") ? [selectedChoice] : [...choices, selectedChoice];
+                selectedOption.value[questionId] = choices;
+            }
+            return;
         }
-        return;
-    }
-    selectedOption.value = { ...selectedOption.value, [questionId]: selectedChoice };
-};
+        selectedOption.value = { ...selectedOption.value, [questionId]: selectedChoice };
+    };
+        onMounted(async() => {
+        const { data } = await axios.get('/questions');
+        questions.value = data;
+    })
 </script>
 
 <style scoped>
