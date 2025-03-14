@@ -29,8 +29,8 @@
             </p>
         </div>
     </div>
-    <div id="szenario" class="bg-gray-100 mb-10 py-8">
-        <div class="container mb-5 py-8">
+    <div id="szenario" class="bg-gray-100 mb-10">
+        <div class="container mb-5 py-16 bg-gray-100">
             <h2 class="font-bold small-caps mb-5 ">Szenario:</h2>
 
             <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
@@ -108,18 +108,18 @@
         </div>
     </div>
     <div id="umfrage" class="container mb-10 py-8 p-2">
-        <h2 class="font-bold mb-6 small-caps">        
+        <h2 class="font-bold mb-6 small-caps">
             Hier die 6 Fragen:
         </h2>
 
-        <div class="grid grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
+        <div class="grid lg:grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
             <div class="question row-span-4 p-6 text-white relative">                
                 <span v-html="question.question" />      
                 <div class="absolute question-number">{{ question.id }}</div>          
             </div>
             <div class="border border-black">
                 <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
-                    <div class=" p-2.5">
+                    <div class="p-2.5">
                         <input 
                         type="checkbox" 
                         :id="`question-${question.id}-choice-${index}`" 
