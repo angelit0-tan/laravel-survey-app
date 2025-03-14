@@ -111,11 +111,10 @@
         <h2 class="font-bold mb-6 small-caps">
             Hier die 6 Fragen:
         </h2>
-
         <div class="grid lg:grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
-            <div class="question row-span-4 p-6 text-white relative">                
-                <span v-html="question.name" />      
-                <div class="absolute question-number">{{ question.id }}</div>          
+            <div class="question row-span-4 p-6 text-white relative">
+                <div class="absolute lg:top-0 top-6 lg:-left-16 -left-0 question-number">{{ question.id }}</div>               
+                <div class="lg:ml-0 ml-6"><span v-html="question.name" /></div>
             </div>
             <div class="border border-black">
                 <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.options" :key="choice.id">
@@ -124,8 +123,10 @@
                         type="checkbox" 
                         :id="`question-${question.id}-choice-${index}`" 
                         :value="choice"
-                        :checked="selectedOption[question.id] === index"
-                        @change="selectOnlyOne(question.id, index)"
+                        :checked="Array.isArray(form.selectedOption[question.id]) 
+                        ? form.selectedOption[question.id].includes(index) 
+                        : form.selectedOption[question.id] === index"
+                        @change="selectOnlyOne(question.id, index)"                        
                         />
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
                             <span v-html="choice.name" />
@@ -135,6 +136,7 @@
             </div>
         </div>
     </div>
+    
     <div class="container mb-10 p-2">
         <p class="font-bold">
             Das war's schon.
@@ -148,37 +150,60 @@
             Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
         </p>            
         <p class="mb-5">
-            Ihre E-Mail-Adresse: <input class="email ml-2" type="text" />
+            Ihre E-Mail-Adresse: <input type="email" v-model="form.email" class="email ml-2" />
         </p>
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
         </p>
-        
-        
     </div>
 
     <div class="container text-center py-20">
-        <button class="send-button">Jetzt Absenden</button>
+        <button @click="submit" class="send-button">Jetzt Absenden</button>
     </div>
 </template>
 <script setup>
     import { onMounted, ref } from 'vue';
     import axios from 'axios';
     const questions = ref(null);
-
-    const selectedOption = ref({});
+    const form = ref({
+        email: null,
+        selectedOption: {}
+    });
     const selectOnlyOne = (questionId, selectedChoice) => {
-        // if (questionId === 6) {
-        //     selectedOption.value = selectedChoice; 
-        //     return;
-        // }
-        selectedOption.value = { ...selectedOption.value, [questionId]: selectedChoice };
-    };
+    if (questionId === 6) {
+        // Get the current selections for question 6
+        let choices = form.value.selectedOption[questionId] || [];
+        // If the selected choice is "1", clear everything and keep only "1"
+        if (selectedChoice === 0) {
+            form.value.selectedOption[questionId] = 0;
+        } else {
+            // If "0" is already selected, replace it with the new choice
+            if (choices.includes(0)) {
+                form.value.selectedOption[questionId] = [selectedChoice]; // Replace 0 with new choice
+            } else {
+                // Toggle selection: Remove if exists, otherwise add it
+                form.value.selectedOption[questionId] = choices.includes(selectedChoice)
+                    ? choices.filter(choice => choice !== selectedChoice) 
+                    : [...choices, selectedChoice];
+            }
+        }
+        return;
+    }
 
-    onMounted(async() => {
+    // Toggle selection for single-choice questions
+    form.value.selectedOption = {
+        ...form.value.selectedOption,
+        [questionId]: form.value.selectedOption[questionId] === selectedChoice ? null : selectedChoice
+    };
+};
+        onMounted(async() => {
         const { data } = await axios.get('/questions');
         questions.value = data;
     })
+
+    const submit = () => {
+        
+    }
 </script>
 
 <style scoped>
@@ -206,8 +231,8 @@
     padding: 0.5rem;
     font-weight: 900;
     font-family: 'Saria', sans-serif;
-    top: 0px;
-    left: -4rem;
+    /* top: 0px;
+    left: -4rem; */
 }
 
 .questions-link {
