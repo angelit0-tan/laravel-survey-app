@@ -109,7 +109,7 @@
     </div>
     <div id="umfrage" class="container mb-10 py-8 p-2">
         <h2 class="font-bold mb-6 small-caps">
-            Hier die 6 Fragen:
+            Hier die 6 Fragen:{{ selectedOption }}
         </h2>
         <div class="grid lg:grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
             <div class="question row-span-4 p-6 text-white relative">
@@ -123,8 +123,10 @@
                         type="checkbox" 
                         :id="`question-${question.id}-choice-${index}`" 
                         :value="choice"
-                        :checked="selectedOption[question.id] === index"
-                        @change="selectOnlyOne(question.id, index)"
+                        :checked="Array.isArray(selectedOption[question.id]) 
+                        ? selectedOption[question.id].includes(index) 
+                        : selectedOption[question.id] === index"
+                        @change="selectOnlyOne(question.id, index)"                        
                         />
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
                             <span v-html="choice.name" />
@@ -166,20 +168,32 @@
 
     const selectedOption = ref({});
     const selectOnlyOne = (questionId, selectedChoice) => {
-        if (questionId === 6) {
-            // If the user selects "1", clear all other selected options
-            if (selectedChoice === "1") {
-                selectedOption.value[questionId] = ["1"]; // Reset to only "1"
+    if (questionId === 6) {
+        // Get the current selections for question 6
+        let choices = selectedOption.value[questionId] || [];
+        // If the selected choice is "1", clear everything and keep only "1"
+        if (selectedChoice === 0) {
+            selectedOption.value[questionId] = 0;
+        } else {
+            // If "0" is already selected, replace it with the new choice
+            if (choices.includes(0)) {
+                selectedOption.value[questionId] = [selectedChoice]; // Replace 0 with new choice
             } else {
-                // If "1" is already selected, remove it and then add the new choice
-                let choices = selectedOption.value[questionId] || [];
-                choices = choices.includes("1") ? [selectedChoice] : [...choices, selectedChoice];
-                selectedOption.value[questionId] = choices;
+                // Toggle selection: Remove if exists, otherwise add it
+                selectedOption.value[questionId] = choices.includes(selectedChoice)
+                    ? choices.filter(choice => choice !== selectedChoice) // Remove if selected
+                    : [...choices, selectedChoice]; // Add if not selected
             }
-            return;
         }
-        selectedOption.value = { ...selectedOption.value, [questionId]: selectedChoice };
+        return;
+    }
+
+    // Toggle selection for single-choice questions
+    selectedOption.value = {
+        ...selectedOption.value,
+        [questionId]: selectedOption.value[questionId] === selectedChoice ? null : selectedChoice
     };
+};
         onMounted(async() => {
         const { data } = await axios.get('/questions');
         questions.value = data;
