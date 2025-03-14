@@ -113,9 +113,9 @@
         </h2>
 
         <div class="grid lg:grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
-            <div class="question row-span-4 p-6 text-white relative">                
-                <span v-html="question.question" />      
-                <div class="absolute question-number">{{ question.id }}</div>          
+            <div class="question row-span-4 p-6 text-white relative">
+                <span v-html="question.question" />
+                <div class="absolute top-0 lg:-left-16 -left-0 question-number">{{ question.id }}</div>          
             </div>
             <div class="border border-black">
                 <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.choices" :key="choice.id">
@@ -133,7 +133,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>{{ selectedOption }}
     </div>
     <div class="container mb-10 p-2">
         <p class="font-bold">
@@ -229,10 +229,18 @@ const questions = [
 
 const selectedOption = ref({});
 const selectOnlyOne = (questionId, selectedChoice) => {
-    // if (questionId === 6) {
-    //     selectedOption.value = selectedChoice; 
-    //     return;
-    // }
+    if (questionId === 6) {
+        // If the user selects "1", clear all other selected options
+        if (selectedChoice === "1") {
+            selectedOption.value[questionId] = ["1"]; // Reset to only "1"
+        } else {
+            // If "1" is already selected, remove it and then add the new choice
+            let choices = selectedOption.value[questionId] || [];
+            choices = choices.includes("1") ? [selectedChoice] : [...choices, selectedChoice];
+            selectedOption.value[questionId] = choices;
+        }
+        return;
+    }
     selectedOption.value = { ...selectedOption.value, [questionId]: selectedChoice };
 };
 </script>
@@ -262,8 +270,8 @@ const selectOnlyOne = (questionId, selectedChoice) => {
     padding: 0.5rem;
     font-weight: 900;
     font-family: 'Saria', sans-serif;
-    top: 0px;
-    left: -4rem;
+    /* top: 0px;
+    left: -4rem; */
 }
 
 .questions-link {

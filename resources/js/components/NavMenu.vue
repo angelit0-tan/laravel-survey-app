@@ -18,7 +18,7 @@
 
     <ul
       v-show="isOpen"
-      class="absolute bg-white font-bold z-50 mt-5 sm-menu"
+      class="lg:hidden absolute bg-white font-bold z-50 mt-5 sm-menu"
     >
       <a @click="toggleMenu" href="#willkommen"><li>Worum es Geht</li></a>
       <a @click="toggleMenu" href="#szenario"><li>Szenario</li></a>
