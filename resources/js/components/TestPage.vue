@@ -118,16 +118,7 @@
             </div>
             <div class="border border-black">
                 <div class="flex justify-between " :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.options" :key="choice.id">
-                    <div class="p-2.5">
-                        <!-- <input 
-                        type="checkbox" 
-                        :id="`question-${question.id}-choice-${index}`" 
-                        :value="choice"
-                        :checked="Array.isArray(form.selectedOption[question.id]) 
-                        ? form.selectedOption[question.id].includes(index) 
-                        : form.selectedOption[question.id] === index"
-                        @change="selectOnlyOne(question.id, index)"                        
-                        /> -->
+                    <div class="flex p-2.5">
                         <input 
                         :type="question.id < 6 ? 'radio' : 'checkbox'"
                         v-model="question.answers"
@@ -165,8 +156,9 @@
     </div>
 
     <div class="container text-center px-3 lg:px-0 py-20">
-        <button type="button" @click="submit()" class="send-button mb-10">Jetzt Absenden</button>
-        <p v-if="error" v-html="error" class="text-red-500"></p>
+        <button type="button" @click="submit()" ref="submitButton" class="send-button mb-10">Jetzt Absenden</button>
+        <p v-if="error" class="font-bold small-caps text-red-500 text-2xl">{{ error }}</p>
+        <p v-if="msg" class="font-bold small-caps text-green-500 text-2xl">{{ msg }}</p>
     </div>
 </template>
 <script setup>
@@ -174,8 +166,9 @@
     import axios from 'axios';
     const questions = ref(null);
     const email = ref(null);
-    const option = ref([]);
+    const submitButton = ref();
     const error = ref(null);
+    const msg = ref(null);
     const selectOnlyOne = (questionId, selectedChoice) => {
         if (questionId === 6) {
             if (selectedChoice === 21) {
@@ -212,18 +205,19 @@
     const submit = async () => {
         // console.log(checkEmailExists(email.value))
         error.value="";
+        msg.value="";
         const allQuestionsAnswered = questions.value.every(q => 
             Array.isArray(q.answers) ? q.answers.length > 0 : q.answers !== undefined
         );
 
         if(!allQuestionsAnswered)
-            error.value="Please answer all questions. <br />"; 
+        error.value="Bitte beantworten Sie alle Fragen."; 
         
-        if(!email.value)
-            error.value +="Please enter your email address";
+        // if(!email.value)
+        //     msg.value +="Please enter your email address";
 
-        else if (!isValidEmail(email.value))
-            error.value+="Please enter a valid email address";
+        // else if (!isValidEmail(email.value))
+        //     msg.value+="Please enter a valid email address";
 
         if(error.value) 
             return;
@@ -231,12 +225,12 @@
         const answers = questions.value.map((item) => item.answers);
         try {
             await axios.post("/answers", {'email' : email.value, 'answers': answers.flat()});
-            alert("Answer submitted successfully!");
+            msg.value="Vielen Dank! Ihre Antworten wurden erfolgreich übermittelt.";
+            submitButton.value.style.display = 'none';
             questions.value.forEach(q => q.answers = []);
             email.value = "";
         } catch (error) {
-            console.error("Submission failed:", error);
-            alert("There was an error submitting your answers. Please try again.");
+            error.value=error;
         }
     };
 
