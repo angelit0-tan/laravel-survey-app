@@ -2,7 +2,7 @@
     <div class="mb-10">
         <my-header></my-header>
     </div>
-    <div id="willkommen" class="container mb-10 py-8">
+    <div id="willkommen" class="container mb-10 px-3 lg:px-0 py-8">
         <div class="p-2 mb-5">
             <h2 class="font-bold small-caps">            
                 Guten Tag.
@@ -30,7 +30,7 @@
         </div>
     </div>
     <div id="szenario" class="bg-gray-100 mb-10">
-        <div class="container mb-5 py-16 bg-gray-100">
+        <div class="container mb-5 px-3 lg:px-0 py-16 bg-gray-100">
             <h2 class="font-bold small-caps mb-5 ">Szenario:</h2>
 
             <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
@@ -107,7 +107,7 @@
             </p>
         </div>
     </div>
-    <div id="umfrage" class="container mb-10 py-8 p-2">
+    <div id="umfrage" class="container mb-10 px-3 lg:px-2 py-8">
         <h2 class="font-bold mb-6 small-caps">
             Hier die 6 Fragen:
         </h2>
@@ -144,7 +144,7 @@
         </div>
     </div>
     
-    <div class="container mb-10 p-2">
+    <div class="container mb-10 px-3 lg:px-2 py-2">
         <p class="font-bold">
             Das war's schon.
         </p>
@@ -157,14 +157,14 @@
             Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
         </p>            
         <p class="mb-5">
-            Ihre E-Mail-Adresse: <input type="email" v-model="email" class="email ml-2" />
+            Ihre E-Mail-Adresse: <input type="email" v-model="email" class="email lg:ml-2" />
         </p>
         <p class="font-bold">                
             Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
         </p>
     </div>
 
-    <div class="container text-center py-20">
+    <div class="container text-center px-3 lg:px-0 py-20">
         <button type="button" @click="submit()" class="send-button mb-10">Jetzt Absenden</button>
         <p v-if="error" v-html="error" class="text-red-500"></p>
     </div>
@@ -258,6 +258,7 @@
 .email {
     border-bottom: 2px solid #00a4dc;
     width: 30rem;
+    max-width: 100%;
 }
 
 .send-button {
