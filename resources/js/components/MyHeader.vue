@@ -11,8 +11,8 @@
             </div>
         </div>
         <div class="relative">
-          <img src="/images/header-hulst.jpg" class="w-screen"/>
-          <img src="/images/bubble.png" class="bubble absolute w-1/3"/>
+          <img src="/images/header-hulst.jpg" class="h-60 lg:h-auto object-cover xl:w-screen"/>
+          <img src="/images/bubble.png" class="bubble absolute w-1/2 xl:w-1/3"/>
         </div>
         
     </div>
