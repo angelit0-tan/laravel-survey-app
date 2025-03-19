@@ -3,7 +3,7 @@
         <div class="flex justify-between">
             <div 
                 class="">
-                <img src="/images/logo.png" class="m-10 lg:w-96 w-64" />
+                <img src="/images/enquete-hulst-2.png" class="m-10 lg:w-96 w-64" />
             </div>
             <!-- Menu Toggle Button -->
             <button type="button" class="lg:hidden z-50 mr-6" @click="toggleMenu">
@@ -35,7 +35,7 @@
         </div>
         <div class="relative">
           <img src="/images/header-hulst.jpg" class="h-60 lg:h-auto object-cover w-screen sm:w-full "/>
-          <img src="/images/bubble.png" class="bubble absolute w-1/2 xl:w-1/3"/>
+          <img src="/images/bubble-2.png" class="bubble absolute w-1/2 xl:w-1/3"/>
         </div>
         
     </div>
