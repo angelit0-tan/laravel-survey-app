@@ -124,7 +124,8 @@
                         v-model="question.answers"
                         :id="`question-${question.id}-choice-${index}`" 
                         :value="choice.id"
-                        @change="selectOnlyOne(question.id, choice.id)"                
+                        @change="selectOnlyOne(question.id, choice.id)"
+                        class="flex-none"
                         />
                         <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
                             <span v-html="choice.name" />
