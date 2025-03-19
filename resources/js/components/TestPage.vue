@@ -250,13 +250,13 @@
 
 <style scoped>
 .email {
-    border-bottom: 2px solid #00a4dc;
+    border-bottom: 2px solid var(--main-color);
     width: 30rem;
     max-width: 100%;
 }
 
 .send-button {
-    background-color: #00a4dc;
+    background-color: var(--main-color);
     color: white;
     border-radius: 10px;
     font-size: larger;
@@ -269,7 +269,7 @@
 
 .question-number {
     color: white;
-    background-color: #00a4dc;
+    background-color: var(--main-color);
     font-size: 3rem;
     padding: 0.5rem;
     font-weight: 900;
@@ -279,7 +279,7 @@
 }
 
 .questions-link {
-    color: #00a4dc;
+    color: var(--main-color);
 }
 
 input[type="radio"],
@@ -298,7 +298,7 @@ input[type="checkbox"] {
 input[type="radio"]:checked::before,
 input[type="checkbox"]:checked::before {
 position: absolute;
-  color: #00a4dc !important;
+  color: var(--main-color) !important;
   content: "\00A0\2713\00A0" !important;
   font-weight: bolder;
   font-size: 17px;

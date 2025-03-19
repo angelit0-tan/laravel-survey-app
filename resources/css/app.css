@@ -123,9 +123,9 @@
 
 
 @property --main-color {
-  /* initial-value: #007ca6; */
   syntax: "<color>";
   inherits: false;
+  /* initial-value: #00a4dc; */
   initial-value: #0066ff;
 }
 
