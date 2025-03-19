@@ -54,7 +54,7 @@ const toggleMenu = () => {
 <style scoped>
   ul {
     font-family: 'Saria', sans-serif;
-    color: #007ca6;
+    color: var(--main-color);
     background: white;
     right: 0px;
     top: 70px;

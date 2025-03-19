@@ -121,6 +121,14 @@
   src: url('/fonts/calibri/calibri-bold-italic.ttf') format('truetype');
 }
 
+
+@property --main-color {
+  /* initial-value: #007ca6; */
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0066ff;
+}
+
 body {
     font-family: 'Calibri', sans-serif;
     font-size: 1.3rem;
@@ -133,7 +141,7 @@ h2 {
   font-weight: 500;
   font-size: 1.875rem; 
   line-height: 2.25rem;
-  color: #007ca6;
+  color: var(--main-color);
 }
 
 h3 {
@@ -141,7 +149,7 @@ h3 {
   font-weight: 500;
   font-size: 1.45rem;
   line-height: 1.75rem;
-  color: #007ca6;
+  color: var(--main-color);
 }
 
 .container {
@@ -159,7 +167,7 @@ h3 {
 }
 
 .question {  
-  background-color: #00a4dc;
+  background-color: var(--main-color);
 }
 
 .small-caps {
