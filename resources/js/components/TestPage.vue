@@ -119,7 +119,7 @@
             <div class="border border-black">
                 <div class="flex justify-between" :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.options" :key="choice.id">
                     <div class="flex p-2.5 items-center">
-                        <input 
+                        <input
                         :type="question.id < 6 ? 'radio' : 'checkbox'"
                         v-model="question.answers"
                         :id="`question-${question.id}-choice-${index}`" 

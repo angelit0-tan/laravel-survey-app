@@ -7,7 +7,7 @@
             </div>
             <!-- Menu Toggle Button -->
             <button type="button" class="lg:hidden z-50 mr-6" @click="toggleMenu">
-                <img src="/images/menu.png" alt="Open Menu" class="w-12">
+                <img src="/images/menu-2.png" alt="Open Menu" class="w-12">
             </button>
         </div>
         <div class="container self-center">
