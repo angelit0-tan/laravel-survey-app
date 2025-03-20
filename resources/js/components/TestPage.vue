@@ -254,6 +254,12 @@
     border-bottom: 2px solid var(--main-color);
     width: 30rem;
     max-width: 100%;
+    padding-left: 10px;
+}
+
+.email:focus {
+    outline: none;
+    background: #e3eeff;
 }
 
 .send-button {
