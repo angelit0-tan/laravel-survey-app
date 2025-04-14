@@ -77,7 +77,7 @@
             </ul>
 
             <p class="mb-5">            
-                U, de eigenaar van dit voor 300.000 euro gekochte huis, schrijft daarom nu naar de gemeente Hulst en de plaatselijke burgemeester, mevrouw Jense-van Haarst. U vraagt har voor een gesprek om met u over deze onroerendgoed-situatie te praten.<br />
+                U, de eigenaar van dit voor 300.000 euro gekochte huis, schrijft daarom nu naar de gemeente Hulst en de plaatselijke burgemeester, mevrouw Jense-van Haarst. U vraagt haar voor een gesprek om met u over deze onroerendgoed-situatie te praten.<br />
                 U hebt gehoord dat de burgemeester verplicht is om dit gesprek met u te hebben. Toch beantwoordt mevrouw Jense-van Haarst uw brieven niet. Ze antwoordt zelfs niet op de brieven van uw advocaat.
             </p>
 
