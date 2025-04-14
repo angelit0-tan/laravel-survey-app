@@ -98,11 +98,11 @@
                 Tot zover ons verhaal. Het is werkelijk zo gebeurd. Wij zijn geïnteresseerd in uw mening:
             </p>
 
-            <p class="font-bold mb-5 pl-5">
+            <p class="font-bold mb-5 pl-14">
                 Wat vindt u als burger van het gedrag van de gemeenteraad en mevrouw Jense-van Haarst, de burgemeester van Hulst?
             </p>
 
-            <p class="font-bold mb-5 pl-5">            
+            <p class="font-bold mb-5 pl-14">            
                 En: Wat zou <span class="italic underline">U</span> als burger doen als de gemeente Hulst of de burgemeester zo, op deze manier, met 	u zou omgaan?
             </p>
 
@@ -114,7 +114,7 @@
                 Vink gewoon de vakjes bij de volgende 6 korte vragen aan.
             </p>
 
-            <p class="font-bold mb-5 pl-5 small-caps">            
+            <p class="font-bold mb-5 pl-14 small-caps">            
                 En nogmaals: deze enquête is anoniem. U hoeft niet eens uw naam op te geven.
             </p>
         </div>
