@@ -142,7 +142,7 @@
                         @change="selectOnlyOne(question.id, choice.id)"
                         class="flex-none"
                         />
-                        <label class="ml-2" :for="`question-${question.id}-choice-${index}`">
+                        <label class="question-options ml-2" :for="`question-${question.id}-choice-${index}`">
                             <span v-html="choice.name" />
                         </label>
                     </div>
@@ -172,12 +172,12 @@
             En nogmaals: Wij slaan geen van uw gegevens op nadat dit werk is voltooid! – Beloofd!
         </p>
         <p class="font-bold">                
-            Trouwens: Als u vragen hebt over dit verhaal, aarzel dan niet om ons een e-mail te sturen! – Dit is ons e-mailadres: 
+            Trouwens: Als u vragen hebt over dit verhaal, aarzel dan niet om ons een e-mail te sturen! – Dit is ons e-mailadres: info@enquete-hulst.nl
         </p>
     </div>
 
     <div class="container text-center px-3 lg:px-0 py-20">
-        <button type="button" @click="submit()" ref="submitButton" class="send-button mb-10">Jetzt Absenden</button>
+        <button type="button" @click="submit()" ref="submitButton" class="send-button mb-10">Nu verzenden</button>
         <p v-if="error" class="font-bold small-caps text-red-500 text-2xl">{{ error }}</p>
         <p v-if="msg" class="font-bold small-caps text-green-500 text-2xl">{{ msg }}</p>
     </div>
@@ -232,7 +232,7 @@
         );
 
         if(!allQuestionsAnswered)
-        error.value="Bitte beantworten Sie alle Fragen."; 
+        error.value="Beantwoord alle vragen."; 
         
         // if(!email.value)
         //     msg.value +="Please enter your email address";
@@ -246,7 +246,7 @@
         const answers = questions.value.map((item) => item.answers);
         try {
             await axios.post("/answers", {'email' : email.value, 'answers': answers.flat()});
-            msg.value="Vielen Dank! Ihre Antworten wurden erfolgreich übermittelt.";
+            msg.value="Hartelijk dank! Je antwoorden zijn succesvol verzonden.";
             submitButton.value.style.display = 'none';
             questions.value.forEach(q => q.answers = []);
             email.value = "";
@@ -303,6 +303,10 @@
     font-family: 'Saria', sans-serif;
     /* top: 0px;
     left: -4rem; */
+}
+
+.question-options {
+    letter-spacing: -0.03em;
 }
 
 .questions-link {

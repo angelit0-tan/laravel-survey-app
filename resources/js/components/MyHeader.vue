@@ -17,18 +17,18 @@
                 <ul
                 class="hidden lg:flex absolute bg-white font-bold lg-menu"
                 >
-                <li><a @click="toggleMenu" href="#willkommen">Worum es Geht</a></li>
-                <li><a @click="toggleMenu" href="#szenario">Szenario</a></li>
-                <li><a @click="toggleMenu" href="#umfrage">6 Fragen</a></li>
+                <li><a @click="toggleMenu" href="#willkommen">Waar gaat het over?</a></li>
+                <li><a @click="toggleMenu" href="#szenario">Scenario</a></li>
+                <li><a @click="toggleMenu" href="#umfrage">6 vragen</a></li>
                 </ul>
 
                 <ul
                 v-show="isOpen"
                 class="lg:hidden absolute bg-white font-bold z-50 mt-8 sm-menu"
                 >
-                <a @click="toggleMenu" href="#willkommen"><li>Worum es Geht</li></a>
-                <a @click="toggleMenu" href="#szenario"><li>Szenario</li></a>
-                <a @click="toggleMenu" href="#umfrage"><li>6 Fragen</li></a>
+                <a @click="toggleMenu" href="#willkommen"><li>Waar gaat het over?</li></a>
+                <a @click="toggleMenu" href="#szenario"><li>Scenario</li></a>
+                <a @click="toggleMenu" href="#umfrage"><li>6 vragen</li></a>
                 </ul>
                 </div>
             </nav>
