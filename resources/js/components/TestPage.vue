@@ -5,111 +5,126 @@
     <div id="willkommen" class="container mb-10 px-3 lg:px-0 py-8">
         <div class="p-2 mb-5">
             <h2 class="font-bold small-caps">            
-                Guten Tag.
+                Goedendag.
             </h2>
             <p class="font-bold my-5">
-                Hier eine kurze Meinungsumfrage; sie richtet sich an die Bewohner von Hulst und Umgebung:
+                Hier een korte enquête; gericht op de inwoners van Hulst en de rest van Nederland:
             </p>
 
-            <h3 class="font-bold small-caps">Worum geht es?</h3>
+            <h3 class="font-bold small-caps">Waar gaat het over?</h3>
             <p class="mb-5">            
-                Die Hulster Stadtverwaltung und ihre Bürgermeisterin. – Ihre Meinung zählt!
+                Het stadsbestuur en de burgemeester van Hulst. – Uw mening telt!
             </p>
 
-            <h3 class="font-bold small-caps">Warum sollten Sie teilnehmen?</h3>
+            <h3 class="font-bold small-caps">Waarom zou u deelnemen?</h3>
             <p class="mb-5">            
-                Unter allen Teilnehmern werden zehn Direktgewinne zu je 100 Euro verlost – für nur fünf Minuten Ihrer Zeit. 
+                Onder alle deelnemers worden tien directe prijzen van elk 100 euro verloot - voor slechts vijf minuten van uw tijd. 
             </p>
 
-            <h3 class="font-bold small-caps">Wie läuft es ab?</h3>
+            <h3 class="font-bold small-caps">Hoe werkt het?</h3>
             <p class="mb-5">            
-                Sie lesen das unten stehende Szenario und beantworten sechs kurze Fragen. – Sie müssen nur ankreuzen.
-                Daten zu Ihrer Person werden nicht gespeichert und nicht veröffentlicht.<br />
-                Wenn Sie das Szenario bereits gelesen haben, kommen Sie hier <a href="#umfrage" class="questions-link underline small-caps">direkt zu den Fragen</a>.
+                U leest het scenario hieronder en beantwoordt 6 korte vragen. – U hoeft de vakjes alleen maar aan te vinken. Uw persoonlijke gegevens worden niet opgeslagen of gepubliceerd.
             </p>
         </div>
     </div>
     <div id="szenario" class="bg-gray-100 mb-10">
         <div class="container mb-5 px-3 lg:px-0 py-16 bg-gray-100">
-            <h2 class="font-bold small-caps mb-5 ">Szenario:</h2>
+            <h2 class="font-bold small-caps mb-5 ">Scenario:</h2>
 
-            <p class="font-bold mb-5">Jetzt lesen Sie eine unglaubliche, aber wahre Geschichte:</p>
+            <p class="font-bold mb-5">Nu leest u een ongelooflijk maar waargebeurd verhaal:</p>
             
             <p>
-                Stellen Sie sich vor, Sie kaufen in Hulst ein Haus im Wert von 300.000 Euro. Das Haus steht unter Denkmalschutz. Kurz darauf verlangt die Stadt, dass Sie 32, ohne Ihr Mitspracherecht festgelegte "Instandhaltungs"-Maßnahmen an diesem Haus durchführen müssen.
+                Stel u koopt een huis in Hulst ter waarde van 300.000 euro. Het huis staat op de monumentenlijst. Kort daarna eist de gemeente dat u 32 "onderhouds"-maatregelen aan dit huis uitvoert, die werden bepaald zonder dat u daar iets over te zeggen heeft.
             </p>
 
             <ul class="list-dash mb-5 pl-2">
                 <li>
-                    Hierfür wird Ihnen eine Frist gesetzt.
+                    U krijgt hiervoor een deadline.
                 </li>
                 <li>
-                    Für den Fall, dass Sie diese Frist nicht einhalten, droht Ihnen die Stadt Hulst eine Strafe von 600.000 Euro an (das Doppelte dessen also, was Ihr Haus lt. Kaufpreis wert ist).
+                    Indien u zich hier niet aan houdt, bedreigt de gemeente Hulst u met een boete van 600.000 euro (dus het dubbele van de koopwaarde van uw huis).
                 </li>
                 <li>
-                    Falls Sie bei der Fertigstellung dieser 32 Punkte nur einen einzigen Punkt nicht korrekt ausführen 	(z.B. nicht identischer Farbton bei den Mauerfugen), dann wird ebenfalls die gesamte  Strafgebühr von 	600.000 für Sie fällig.
+                    Indien u slechts één van deze 32 punten niet op tijd of niet correct uitvoert (bijv. de kleur van de muurvoegen komt niet overeen), bent u ook de volledige boete van 600.000 verschuldigd.  
                 </li>
             </ul>
 
             <p class="mb-5">            
-                Sie beauftragen einen erfahrenen Bauunternehmer. Dieser erstellt einen Bauplan und entdeckt, dass das Haus einsturzgefährdet ist.<br />
-                Mehrere hochwertige Sachverständigen-Gutachten (sogar das von der Stadt Hulst selbst in Auftrag gegebene Gutachten) bestätigen einhellig diesen Sachverhalt und erklären dies Haus sogar für "abreißbar".<br />
-                Falls man dennoch versucht, das Haus zu retten, benötigt es vorab ein neues Fundament, um überhaupt gefahrlos im Haus arbeiten zu können.<br />
-                Allein solch ein neues Fundament kostet Sie zusätzlich um die 530.000 Euro – fast doppelt so viel wie der Kaufpreis des Hauses.<br />
-                Erst danach können Sie die 32 Arbeiten, also die von der Stadt Hulst geforderten Punkte, beginnen.<br />
-                Für diese 32 Arbeiten fallen nach Schätzung sämtlicher Experten für Sie minimal Kosten in Höhe weiterer 1.800.000 Euro an.
+                U huurt een ervaren aannemer in. Hij stelt een bouwplan op en ontdekt dat het gevaarlijk is om in het huis te zijn..<br />
+                Verschillende hoogwaardige deskundigenrapporten (zelfs het rapport in opdracht van de stad Hulst zelf) bevestigen deze feiten unaniem en verklaren dit huis zelfs "klaar voor de sloop".<br />
+                Indien er toch een poging zou worden gedaan om het huis te redden, dan is er van tevoren een nieuwe fundering nodig om veilig in het huis te kunnen werken.<br />
+                Zo'n nieuwe fundering kost u alleen al 560.000 euro extra - bijna twee keer zoveel als de aankoopprijs van het huis.<br />
+                Pas dan kunt u beginnen met de 32 werkzaamheden, dus met de "32 punten" die de gemeente Hulst vereist.<br />
+                Alle experts schatten dat deze 32 werken u minimaal nog eens 1.800.000 euro zullen kosten.
             </p>
 
             <p>            
-                Damit wird für Sie dreierlei überdeutlich:
+                Dit maakt voor u vier feiten overduidelijk:
             </p>
             <ul class="list-dash mb-5 pl-2">
                 <li>
-                    <span class="small-caps">Erstens:</span> Die "32 Punkte"-Forderung der Stadt Hulst ist ohne eine umfassende Baumaßnahme   nach Meinung aller Experten –  <span class="italic">überhaupt nicht realisierbar</span>.
+                    <span class="small-caps">Ten eerste:</span> Volgens alle deskundigen kan de "32 punten"-eis van de stad Hulst helemaal niet worden 	gerealiseerd zonder een voorafgaande uitgebreide bouwmaatregel.
                 </li>
                 <li>
-                    <span class="small-caps">Zweitens:</span> Die Gesamtheit dieser Baumaßnahme, die zwangsläufig erforderlich wäre, um die von der 	Stadt Hulst verlangten "32 Punkte" erfüllen zu können, erfordert von Ihnen einen Kostenaufwand von 	minimal 2.500.000 Euro und bewirkt für Sie einen Verlust von minimal 2,2 Millionen Euro (mehr als 	den 7-fachen Kaufpreis Ihres Hauses).
+                    <span class="small-caps">Ten tweede:</span> Al deze bouwmaatregelen, die onvermijdelijk nodig zouden zijn om aan de "32 punten" te 	voldoen die de stad Hulst eist, zouden u minimaal 2,5 millioen euro kosten en zouden na voltooiing 	een verlies van minimaal 2,2 miljoen euro voor u opleveren (meer dan 7 keer de aankoopprijs van uw huis).
                 </li>
                 <li>
-                    <span class="small-caps">Drittens:</span> Bei dieser Baumaßnahme handelt es sich schon längst nicht mehr um reine "Instandhaltungs"- Maßnahmen, sondern um umfassende "Restaurierungs"-Maßnahmen. – Genau solche "Restaurierungs"- Maßnahmen werden von der Denkmalschutzbehörde aber ausgeschlossen; sie fordert von den Eigentümern denkmalgeschützter Gebäude lediglich jährliche "Instandhaltungs"-Maßnahmen.
+                    <span class="small-caps">Ten derde:</span> Bij deze bouwmaatregelen gaat het al lang niet meer om <span class="italic">"onderhouds"</span>-maatregelen, maar om uitgebreide <span class="italic">"restauratie"</span>-maatregelen. 
+                </li>
+                <li>
+                    <span class="small-caps">Ten vierde:</span> Echter zijn het juist dergelijke "restauratie"-maatregelen die door de monumentenzorg worden uitgesloten. Zij eist alleen jaarlijkse "onderhouds"-maatregelen van de eigenaren van beschermde gebouwen.
                 </li>
             </ul>
 
             <p class="mb-5">            
-                Sie, der Eigentümer dieses für 300.000 Euro gekauften Hauses, wenden sich deshalb jetzt schriftlich an die Stadtverwaltung Hulst und an die dortige Bürgermeisterin, Frau Jense-van Haarst. Sie bitten sie um ein Gespräch mit Ihnen bezüglich dieser Immobilien-Situation.<br />
-                Sie wissen, dass die Bürgermeisterin zu diesem Gespräch mit Ihnen verpflichtet ist. Dennoch beantwortet Frau Jense-van Haarst Ihre Briefe nicht. Sie antwortet zunächst nicht mal auf die Briefe Ihres Anwalts.<br />
-                Stattdessen fordert jetzt die Stadtverwaltung wegen "Fristüberschreitung" zur Erledigung der "32 Punkte" von Ihnen die Strafgebühr von 600.000 Euro. Sie zwingt Sie mit Drohung, einen Gerichtsvollzieher einzuschalten und Ihre Bankkonten zu pfänden, jetzt die 600.000 Euro "Strafgebühr" wegen Überschreitung des Fertigstellungs-Termins der "32 Punkte" auf das Konto der Stadtkasse Hulst zu zahlen.
+                U, de eigenaar van dit voor 300.000 euro gekochte huis, schrijft daarom nu naar de gemeente Hulst en de plaatselijke burgemeester, mevrouw Jense-van Haarst. U vraagt har voor een gesprek om met u over deze onroerendgoed-situatie te praten.<br />
+                U hebt gehoord dat de burgemeester verplicht is om dit gesprek met u te hebben. Toch beantwoordt mevrouw Jense-van Haarst uw brieven niet. Ze antwoordt zelfs niet op de brieven van uw advocaat.
             </p>
 
             <p class="mb-5">            
-                Auch anschließend erhalten Sie zunächst kein Antwortschreiben, geschweige denn einen Gesprächstermin, von Frau Jense-van Haarst, Bürgermeisterin der Stadt Hulst. Erst auf massives, mehrfaches schriftliches Drängen des von Ihnen eingeschaltete Rechtsanwalts nennt das Büro der Bürgermeisterin Jense-van Haarst am letzten Tag der von Ihnen gesetzten Antwortfrist 2 Tage als Terminvorschlag für ein Gespräch. (Dies Gespräch steht zur Zeit noch aus.)
+                In plaats daarvan eist het stadsbestuur nu dat u de "boete" van 600.000 euro betaalt voor het "missen van de deadline" voor het invullen van de "32 punten". Het stadsbestuur dwingt u om de 600.000 euro "dwangsom" voor het overschrijden van de einddatum van de "32 punten" te betalen op de rekening van de gemeentekas van Hulst door te dreigen met het inschakelen van een deurwaarder en beslag te leggen op uw bankrekeningen.
+            </p>
+            
+            <p class="mb-5">
+                Ook daarna krijgt u geen antwoord, laat staan een afspraak voor een gesprek, van mevrouw Jense-van Haarst, burgemeester van de gemeente Hulst.<br /> 
+                Pas na massaal, herhaaldelijk schriftelijk aandringen van de door u ingeschakelde advocaat noemt het kantoor van burgemeester Jense-van Haarst op de laatste dag van de door hem gestelde  antwoordtermijn als voorgestelde datum 2 dagen voor een vergadering.
+            </p>
+            
+            <p class="mb-5">
+                (Dit gesprek heeft inmiddels plaatsgevonden. De burgemeester mevrouw Jense-van Haarst weigerde in dit gesprek 5 keer om zelfs maar een onderhoudsbedrag te noemen dat nog steeds in de ministerieel voorgeschreven, "evenredige" verhouding tot de aankoopwaarde van het huis zou zijn. – Haar letterlijke reactie: "Dat zeg ik niet.")
             </p>
             
             <p class="font-bold mb-5">
-                Soweit unsere Geschichte. Sie ist tatsächlich so passiert. Uns interessiert dazu Ihre Meinung: 
+                Tot zover ons verhaal. Het is werkelijk zo gebeurd. Wij zijn geïnteresseerd in uw mening:
             </p>
 
             <p class="font-bold mb-5 pl-5">
-                Wie beurteilen SIE, als Bürger/in von Hulst und Umgebung, das Verhalten der Stadtverwaltung
-                und von Frau Jense-van Haarst, der Bürgermeisterin von Hulst?      
+                Wat vindt u als burger van het gedrag van de gemeenteraad en mevrouw Jense-van Haarst, de burgemeester van Hulst?
             </p>
 
             <p class="font-bold mb-5 pl-5">            
-                Und: Was würden SIE tun, wenn die Stadt Hulst oder die Bürgermeisterin mit Ihnen als Bürger/in 	auf diese Weise umgehen würde?
+                En: Wat zou <span class="italic underline">U</span> als burger doen als de gemeente Hulst of de burgemeester zo, op deze manier, met 	u zou omgaan?
             </p>
 
             <p class="font-bold mb-5">            
-                Danke für Ihre Zeit und für's Mitdenken! Wir schätzen das wirklich sehr!
+                Bedankt voor uw tijd en voor het meedenken! Wij stellen dat zeer op prijs!
             </p>
 
-            <p class="font-bold mb-5">            
-                Für Ihre Antwort machen Sie bitte einfach 6 Kreuzchen bei den unten stehen kurzen Fragen:
+            <p class="font-bold mb-5">
+                Vink gewoon de vakjes bij de volgende 6 korte vragen aan.
+            </p>
+
+            <p class="font-bold mb-5 pl-5 small-caps">            
+                En nogmaals: deze enquête is anoniem. U hoeft niet eens uw naam op te geven.
             </p>
         </div>
     </div>
     <div id="umfrage" class="container mb-10 px-3 lg:px-2 py-8">
+        <h2 class="font-bold mb-10 small-caps">
+            Sla alstublieft de bladzijde om!
+        </h2>
         <h2 class="font-bold mb-6 small-caps">
-            Hier die 6 Fragen:
+            Hier zijn de 6 vragen:
         </h2>
         <div class="grid lg:grid-cols-2 mb-10" v-for="question in questions" :key="question.id">
             <div class="question row-span-4 p-6 text-white relative">
@@ -138,21 +153,26 @@
     
     <div class="container mb-10 px-3 lg:px-2 py-2">
         <p class="font-bold">
-            Das war's schon.
+            Dat was het al.
         </p>
         <p class="mb-5">                
-            Wir danken Ihnen für Ihre wertvolle Meinung und Ihre Zeit!<br />
-            Gerne würden wir Sie dafür belohnen.
+            Hartelijk dank voor uw waardevolle mening en uw tijd!<br />
+            Wij willen u hiervoor graag belonen.
         </p>
         <p class="mb-5">                
-            Sie möchten an der Verlosung für die zehn 100 Euro Direktgewinne teilnehmen?<br />
-            Geben Sie hier Ihre E-Mail-Adresse an, so dass wir Sie im Gewinnfall benachrichtigen könnnen.
+            Wilt u meedoen aan de <span class="underline font-bold">verloting van tien directe prijzen van 100 euro</span>?
+        </p>           
+        <p class="mb-5">                
+            Voer hier dan uw e-mailadres in zodat wij u kunnen berichten als u wint:
         </p>            
         <p class="mb-5">
-            Ihre E-Mail-Adresse: <input type="email" v-model="email" class="email lg:ml-2" />
+            Uw e-mail-adres: <input type="email" v-model="email" class="email lg:ml-2" />
         </p>
         <p class="font-bold">                
-            Und nochmal: Wir speichern nach Abschluß dieser Arbeit keinerlei Daten von Ihnen! – Versprochen!
+            En nogmaals: Wij slaan geen van uw gegevens op nadat dit werk is voltooid! – Beloofd!
+        </p>
+        <p class="font-bold">                
+            Trouwens: Als u vragen hebt over dit verhaal, aarzel dan niet om ons een e-mail te sturen! – Dit is ons e-mailadres: 
         </p>
     </div>
 

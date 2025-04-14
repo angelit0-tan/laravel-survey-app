@@ -34,7 +34,7 @@
             </nav>
         </div>
         <div class="relative">
-          <img src="/images/header-hulst.jpg" class="h-60 lg:h-auto object-cover w-screen sm:w-full "/>
+          <img src="/images/header-hulst-new.jpg" class="h-60 lg:h-auto object-cover w-screen sm:w-full "/>
           <img src="/images/bubble-2.png" class="bubble absolute w-1/2 xl:w-1/3"/>
         </div>
         
