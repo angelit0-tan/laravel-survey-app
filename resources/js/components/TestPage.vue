@@ -120,9 +120,6 @@
         </div>
     </div>
     <div id="umfrage" class="container mb-10 px-3 lg:px-2 py-8">
-        <h2 class="font-bold mb-10 small-caps">
-            Sla alstublieft de bladzijde om!
-        </h2>
         <h2 class="font-bold mb-6 small-caps">
             Hier zijn de 6 vragen:
         </h2>
