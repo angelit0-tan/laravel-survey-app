@@ -18,7 +18,7 @@
 
             <h3 class="font-bold small-caps">Waarom zou u deelnemen?</h3>
             <p class="mb-5">            
-                Onder alle deelnemers worden tien directe prijzen van elk 100 euro verloot - voor slechts vijf minuten van uw tijd. 
+                <!-- Onder alle deelnemers worden tien directe prijzen van elk 100 euro verloot - voor slechts vijf minuten van uw tijd.  -->
             </p>
 
             <h3 class="font-bold small-caps">Hoe werkt het?</h3>
