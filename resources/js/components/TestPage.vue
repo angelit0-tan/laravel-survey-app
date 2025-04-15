@@ -169,7 +169,8 @@
             En nogmaals: Wij slaan geen van uw gegevens op nadat dit werk is voltooid! – Beloofd!
         </p>
         <p class="font-bold">                
-            Trouwens: Als u vragen hebt over dit verhaal, aarzel dan niet om ons een e-mail te sturen! – Dit is ons e-mailadres: info@enquete-hulst.nl
+            Trouwens: Als u vragen hebt over dit verhaal, aarzel dan niet om ons een e-mail te sturen!<br />
+            Dit is ons e-mailadres: info@enquete-hulst.nl
         </p>
     </div>
 
