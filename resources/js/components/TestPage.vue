@@ -13,17 +13,17 @@
 
             <h3 class="font-bold small-caps">Waar gaat het over?</h3>
             <p class="mb-5">            
-                Het stadsbestuur en de burgemeester van Hulst. – Uw mening telt!
+                Het <span class="text-intro">stadsbestuur en de burgemeester</span> van Hulst. – Uw mening telt!
             </p>
 
             <h3 class="font-bold small-caps">Waarom zou u deelnemen?</h3>
             <p class="mb-5">            
-                <!-- Onder alle deelnemers worden tien directe prijzen van elk 100 euro verloot - voor slechts vijf minuten van uw tijd.  -->
+                Omdat u op deze manier kunt bepalen in welke mate deze situatie <span class="text-intro">overeenkomt met uw persoonlijke gevoel voor rechtvaardigheid</span>. 
             </p>
 
             <h3 class="font-bold small-caps">Hoe werkt het?</h3>
             <p class="mb-5">            
-                U leest het scenario hieronder en beantwoordt 6 korte vragen. – U hoeft de vakjes alleen maar aan te vinken. Uw persoonlijke gegevens worden niet opgeslagen of gepubliceerd.
+                U leest het scenario hieronder en beantwoordt <span class="text-intro">6 korte vragen</span>. – U hoeft de vakjes alleen maar aan te vinken. Uw persoonlijke gegevens worden niet opgeslagen of gepubliceerd.
             </p>
         </div>
     </div>
@@ -268,6 +268,10 @@
 </script>
 
 <style scoped>
+.text-intro {
+    font-weight: 800;
+    color: var(--main-color);
+}
 .email {
     border-bottom: 2px solid var(--main-color);
     width: 30rem;
