@@ -154,9 +154,9 @@
         </p>
         <p class="mb-5">                
             Hartelijk dank voor uw waardevolle mening en uw tijd!<br />
-            Wij willen u hiervoor graag belonen.
+            <!-- Wij willen u hiervoor graag belonen. -->
         </p>
-        <p class="mb-5">                
+        <!-- <p class="mb-5">                
             Wilt u meedoen aan de <span class="underline font-bold">verloting van tien directe prijzen van 100 euro</span>?
         </p>           
         <p class="mb-5">                
@@ -164,7 +164,7 @@
         </p>            
         <p class="mb-5">
             Uw e-mail-adres: <input type="email" v-model="email" class="email lg:ml-2" />
-        </p>
+        </p> -->
         <p class="font-bold">                
             En nogmaals: Wij slaan geen van uw gegevens op nadat dit werk is voltooid! – Beloofd!
         </p>
