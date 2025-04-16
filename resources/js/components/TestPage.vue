@@ -94,7 +94,7 @@
                 (Dit gesprek heeft inmiddels plaatsgevonden. De burgemeester mevrouw Jense-van Haarst weigerde in dit gesprek 5 keer om zelfs maar een onderhoudsbedrag te noemen dat nog steeds in de ministerieel voorgeschreven, "evenredige" verhouding tot de aankoopwaarde van het huis zou zijn. – Haar letterlijke reactie: "Dat zeg ik niet.")
             </p>
             
-            <p class="font-bold mb-5">
+            <p class="font-bold mb-2.5">
                 Tot zover ons verhaal. Het is werkelijk zo gebeurd. Wij zijn geïnteresseerd in uw mening:
             </p>
 
@@ -102,15 +102,15 @@
                 Wat vindt u als burger van het gedrag van de gemeenteraad en mevrouw Jense-van Haarst, de burgemeester van Hulst?
             </p>
 
-            <p class="font-bold mb-5 pl-14">            
-                En: Wat zou <span class="italic underline">U</span> als burger doen als de gemeente Hulst of de burgemeester zo, op deze manier, met 	u zou omgaan?
+            <p class="font-bold mb-5 pl-14" style="letter-spacing: -0.028em;">            
+                En: Wat zou <span class="italic underline">U</span> als burger doen als de gemeente Hulst of de burgemeester zo op deze manier met u zou omgaan?
             </p>
 
-            <p class="font-bold mb-5">            
+            <p class="font-bold mb-5 text-main-color">            
                 Bedankt voor uw tijd en voor het meedenken! Wij stellen dat zeer op prijs!
             </p>
 
-            <p class="font-bold mb-5">
+            <p class="font-bold mb-5 text-main-color">
                 Vink gewoon de vakjes bij de volgende 6 korte vragen aan.
             </p>
 
@@ -128,8 +128,8 @@
                 <div class="absolute lg:top-0 top-6 lg:-left-16 -left-0 question-number">{{ question.id }}</div>               
                 <div class="lg:ml-0 ml-6"><span v-html="question.name" /></div>
             </div>
-            <div class="border border-black">
-                <div class="flex justify-between" :class="{'border-t border-black' : index != 0}" v-for="(choice, index) in question.options" :key="choice.id">
+            <div class="border border-main-color">
+                <div class="flex justify-between" :class="{'border-t border-main-color' : index != 0}" v-for="(choice, index) in question.options" :key="choice.id">
                     <div class="flex p-2.5 items-center">
                         <input
                         :type="question.id < 6 ? 'radio' : 'checkbox'"
@@ -315,6 +315,14 @@
     color: var(--main-color);
 }
 
+.text-main-color {
+    color: var(--main-color);
+}
+
+.border-main-color {
+    border-color: var(--main-color);
+}
+
 input[type="radio"],
 input[type="checkbox"] {
     appearance: none; /* Hide default appearance */
@@ -323,8 +331,9 @@ input[type="checkbox"] {
     content: none;
     outline: none;
     margin: 0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
     position: relative;
+    border: 1px solid #dad9d9;
 }
 
 /* Add checkmark when checked */
